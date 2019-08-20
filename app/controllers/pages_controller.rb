@@ -5,6 +5,5 @@ class PagesController < ApplicationController
   end
 
   def features
-    raise
   end
 end

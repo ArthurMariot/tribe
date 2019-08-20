@@ -14,15 +14,7 @@
         <% else %>
           <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= current_user.avatar %>" />
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <% if current_user.missions.first.nil? %>
-            <% else %>
-            <a class="dropdown-item" href="#"> <%= "My dashboard" %></a>
-            <% end %>
-            <% if current_user.candidatures.first.nil? %>
-            <% else %>
-            <a class="dropdown-item" href="#"> <%= "My applications" %>
-              <% end %>
-          </a>
+
           <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
         </div>
         <% end %>
