@@ -1,10 +1,10 @@
-class PagesController < ApplicationController
+class HrManagers::PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
   end
 
   def features
-    raise
+    # raise
   end
 end
