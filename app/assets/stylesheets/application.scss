@@ -11,3 +11,50 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+    background: #ffff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+h1 {
+    font-size: 40px;
+    line-height:52px;
+    font-weight:700;
+    text-align:center
+}
+
+h2 {
+    font-size:24px;
+    line-height:52px;
+    font-weight:700;
+    text-align:center
+}
+
+
+h3 {
+    font-size:20px;
+    line-height:32px;
+    font-weight:800;
+    text-align:center
+}
+
+p {
+    font-size: 17px;
+    font-weight:400;
+    text-align:center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 17px;
+}
+
+h1, h2, p, a, span{
+    color: #fff;
+}
