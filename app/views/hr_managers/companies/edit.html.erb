@@ -1,11 +1,20 @@
-<h2>My company</h2>
-
-<%= simple_form_for [:hr_managers, @company] do |f| %>
-  <%= f.input :name, label: 'Company name' %>
-
-  <%= f.input :address, label: 'Headquarter location' %>
-  <%= f.input :phone_number, label: 'Phone number' %>
-  <%= f.input :activity, label: 'Activity' %>
-  <%= f.input :logo, label: 'Company logo' %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <h2>Company details</h2>
+  <p>Fill in the company information below accurately, so we can create the presentation of the company</p>
+  <div>
+    <%= simple_form_for [:hr_managers, @company] do |f| %>
+      <%= f.input :short_description, label: 'Description' %>
+      <%= f.input :mission, label: 'Mission' %>
+      <%= f.input :history, label: 'History' %>
+      <%= f.input :photo_header, label: 'Main picture' %>
+      <%= f.input :photo_description, label: 'Team picture' %>
+      <%= f.input :founded_in, label: 'Date of creation' %>
+      <%= f.input :linkedin_url, label: 'Linkedin' %>
+      <%= f.input :facebook_url, label: 'Facebook' %>
+      <%= f.input :github_url, label: 'Github' %>
+      <%= f.input :twitter_url, label: 'Twitter' %>
+      <%= f.input :founded_in, label: 'Date of creation' %>
+      <%= f.button :submit, class:"btn-green" %>
+    <% end %>
+  </div>
+</div>
