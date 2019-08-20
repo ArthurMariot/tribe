@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  scope :hr_managers do
+  namespace :hr_managers do
     get 'features', to: 'pages#features', as: 'features'
     resources :employees, only: [:new, :create, :index]
     resources :companies, only: [:edit, :update]

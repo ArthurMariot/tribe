@@ -1,13 +1,12 @@
-class CompaniesController < ApplicationController
+class HrManagers::CompaniesController < ApplicationController
   def edit
     @company = current_user.company
   end
 
   def update
     @company = current_user.company
-    @company.update(company_params)
-      if @company.save?
-        redirect_to features_path
+      if @company.update(company_params)
+        redirect_to hr_managers_features_path
       else
         render :edit
       end

@@ -1,0 +1,11 @@
+<h2>My company</h2>
+
+<%= simple_form_for [:hr_managers, @company] do |f| %>
+  <%= f.input :name, label: 'Company name' %>
+
+  <%= f.input :address, label: 'Headquarter location' %>
+  <%= f.input :phone_number, label: 'Phone number' %>
+  <%= f.input :activity, label: 'Activity' %>
+  <%= f.input :logo, label: 'Company logo' %>
+  <%= f.button :submit %>
+<% end %>
