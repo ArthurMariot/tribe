@@ -1,0 +1,2 @@
+class ValueCategory < ApplicationRecord
+end
