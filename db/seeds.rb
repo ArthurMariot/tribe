@@ -10,6 +10,9 @@ puts 'Cleaning database...team'
 HierarchyRank.destroy_all
 puts 'Cleaning database...hierarchy_ranks'
 
+Value.destroy_all
+puts 'Cleaning database...values'
+
 puts 'Creating companies...'
 zapier = Company.create!(name: "Zapier",
   country: "USA",
@@ -38,6 +41,23 @@ zapier = Company.create!(name: "Zapier",
   )
 puts 'Finished companies!'
 
+puts 'Creating value_categories...'
+people = ValueCategory.create!(name: "People", picto_url: "https://www.letsdeel.com/089c0c75424c661f5e072575177da020.png")
+care = ValueCategory.create!(name: "Care", picto_url: "https://www.letsdeel.com/01e374b8f502f42385ae6457ee03bba1.png")
+ambition = ValueCategory.create!(name: "Ambition", picto_url: "https://www.letsdeel.com/e6ba885ab3a3c52974c1dd57a0b71cdc.pngs")
+simplicity = ValueCategory.create!(name: "Simplicity", picto_url: "https://www.letsdeel.com/97ee6fdee2c89e407efa020f626a8f58.png")
+growth = ValueCategory.create!(name: "Simplicity", picto_url: "https://www.letsdeel.com/97ee6fdee2c89e407efa020f626a8f58.png")
+lean = ValueCategory.create!(name: "Simplicity", picto_url: "https://www.letsdeel.com/97ee6fdee2c89e407efa020f626a8f58.png")
+hacker = ValueCategory.create!(name: "Simplicity", picto_url: "https://www.letsdeel.com/97ee6fdee2c89e407efa020f626a8f58.png")
+puts 'Finished value_categories!'
+
+puts 'Creating values...'
+value_1 = Value.create!(title: "People First", content: "We strive to build products that empower people to work together no matter where they are.", company: zapier, value_category: people)
+value_2 = Value.create!(title: "Care", content: "We aspire to be generous and thoughtful in every interaction with each other and our customers.", company: zapier, value_category: care)
+value_3 = Value.create!(title: "High Standards", content: "We aim for excellence in everything we do and always go the extra mile for our customers.", company: zapier, value_category: ambition)
+value_4 = Value.create!(title: "Simplicity", content: "Our product is simple to use for both contractors and clients. Simplicity always wins.", company: zapier, value_category: simplicity)
+puts 'Finished values!'
+
 puts 'Creating teams...'
 hr = Team.create!(name: "Product", company: zapier)
 product = Team.create!(name: "HR", company: zapier)
@@ -49,7 +69,7 @@ puts 'Finished teams!'
 puts 'Creating hierarchy_ranks...'
 head = HierarchyRank.create!(name: "Head", rank: 3)
 senior = HierarchyRank.create!(name: "Senior", rank: 5)
-junior = HierarchyRank.create!(name: "Senior", rank: 7)
+junior = HierarchyRank.create!(name: "Junior", rank: 7)
 puts 'Finished hierarchy_ranks!'
 
 puts 'Creating users...'
@@ -61,7 +81,4 @@ jeanne = User.create!(email: "jeanne@example.com", password: "password", first_n
 marie = User.create!(email: "marie@example.com", password: "password", first_name: "Marie", last_name: "Pavet", company: zapier, team: sales, hierarchy_rank: junior)
 julien = User.create!(email: "julien@example.com", password: "password", first_name: "Julien", last_name: "Perrault", company: zapier, team: sales, hierarchy_rank: head)
 puts 'Finished users!'
-
-
-
 
