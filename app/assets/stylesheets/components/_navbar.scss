@@ -1,6 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  margin-bottom: 40px;
+  z-index: 2;
+}
+
+#navbar-white {
+  background-color: #263858;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +13,40 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 120px;
+}
+
+.nav-center a {
+  float: left;
+  text-align: center;
+  padding: 10px 32px;
+  font-weight: 700;
+  color: #1fe3cf;
+}
+
+
+a:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.btn-blue:hover {
+  opacity: 0.6;
+  border: 1px solid blue;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav-center .dropdown-menu a {
+  color: #1fe3cf;
+}
+
+.nav-center .dropdown-menu {
+  margin-right: 10px;
+  border: 1px solid #ff487e;
 }
