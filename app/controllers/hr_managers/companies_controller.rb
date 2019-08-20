@@ -5,11 +5,11 @@ class HrManagers::CompaniesController < ApplicationController
 
   def update
     @company = current_user.company
-      if @company.update(company_params)
-        redirect_to hr_managers_features_path
-      else
-        render :edit
-      end
+    if @company.update(company_params)
+      redirect_to hr_managers_features_path
+    else
+      render :edit
+    end
   end
 
   private
