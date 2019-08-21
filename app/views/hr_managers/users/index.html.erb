@@ -1,22 +1,31 @@
 <h1>Manage your onboarding</h1>
 
 <div class="container">
- <% @employees.each do |employee| %>
-   <div class="onboarded-employee-infos">
-         <img src="https://miro.medium.com/max/1400/1*XX2X4OtFiQTdYV3OtIlAIg.png(122 ko)
-https://miro.medium.com/max/1400/1*XX2X4OtFiQTdYV3OtIlAIg.png
-" alt="" class="logo-sm">
-         <h3><%= employee.first_name %> <%= employee.first_name %></h3>
-         <h4><%= employee.job_title %> </h4>
-         <h4><%= employee.team.name %> </h4>
-         <strong><%= employee.last_name %></strong></p>
-     </div>
-     <div class="onboarding-status-infos">
-         <div class="progression-bar">
-           <span>onboarding</span>
-           <span> % progression</span>
-           <a>checklist</a>
-         </div>
-     </div>
- <% end %>
+  <% @employees.each do |employee| %>
+    <div class="onboarding-card">
+      <div class="onboarded-employee-infos">
+          <div class="onboarded-employee-infos-personal">
+            <img src=<%= employee.avatar %> class="avatar-large">
+            <h2><%= employee.first_name %> <strong><%= employee.last_name %></strong></h2>
+          </div>
+          <div>
+            <p><%= employee.team.name %> </p>
+            <p>Rattachement à préciser</p>
+            <p>Buddy:<%= employee.first_name %>  -  <strong> arrived:12 Sep 2019</strong</p>
+          </div>
+      </div>
+      <div class="onboarding-status-infos">
+        <div class="progression-bar">
+          <img src="https://banner2.kisspng.com/20180330/ele/kisspng-progress-bar-computer-icons-loading-5abe959ace44f9.4184702615224395788449.jpg" class="progression-bar">
+        </div>
+        <div class="progression-bar-caption">
+          <span>onboarding</span>
+          <span> % progression</span>
+        </div>
+        <a class="btn-blue">checklist</a>
+      </div>
+    </div>
+  <% end %>
 </div>
+
+
