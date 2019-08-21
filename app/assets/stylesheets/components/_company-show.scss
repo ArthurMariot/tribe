@@ -1,0 +1,126 @@
+.description {
+  margin-top: 48px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.description img {
+  height: 100%;
+  width: 40%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.description h2 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.description p {
+  font-size: 15px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+}
+
+.description .description-infos {
+  padding: 16px;
+  padding-left: 0;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+
+.card-value {
+  overflow: hidden;
+  height: 120px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.card-value img {
+  height: 100%;
+  width: 90px;
+  object-fit: fill;
+}
+
+.card-value h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-value p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-value .card-value-infos {
+  padding: 0 16px;
+}
+
+.social-medias {
+  margin-top: 24px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: $blue;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
