@@ -13,49 +13,52 @@
 @import "pages/index";
 
 body {
-    background: #ffff;
-    padding-top: 120px;
+  background: #ffff;
+  padding-top: 120px;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding-left: 0;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 h1 {
-    font-size: 40px;
-    line-height:52px;
-    font-weight:700;
-    text-align:center;
-    color: $blue;
+  font-size: 40px;
+  line-height:52px;
+  font-weight:700;
+  text-align:center;
+  color: $blue;
 }
 
 h2 {
-    font-size:24px;
-    line-height:52px;
-    font-weight:700;
-    color: $blue;
+  font-size:24px;
+  line-height:52px;
+  font-weight:700;
+  text-align:center;
+  color: $blue;
 }
 
 
 h3 {
-    font-size:20px;
-    line-height:32px;
-    font-weight:800;
-    color: $blue;
+  font-size:20px;
+  line-height:32px;
+  font-weight:800;
+  text-align:center;
+  color: $blue;
 }
 
 p {
-    font-size: 17px;
-    font-weight:400;
+  font-size: 17px;
+  font-weight:400;
+  text-align:center;
 }
 
 a {
-    text-decoration: none;
-    font-size: 17px;
+  text-decoration: none;
+  font-size: 17px;;
 }
 
 p, a, span{
-    color: gray;
+  color: gray;
 }
