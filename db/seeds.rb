@@ -73,12 +73,36 @@ junior = HierarchyRank.create!(name: "Junior", rank: 7)
 puts 'Finished hierarchy_ranks!'
 
 puts 'Creating users...'
-emma = User.create!(email: "emma@example.com", password: "password", first_name: "Emma", last_name: "Bruno", company: zapier, team: hr, hierarchy_rank: head)
-louis = User.create!(email: "louis@example.com", password: "password", first_name: "Louis", last_name: "Uguen", company: zapier, team: product, hierarchy_rank: senior, onboarding_status: true)
-edouard = User.create!(email: "edouard@example.com", password: "password", first_name: "Edouard", last_name: "Uguen", company: zapier, team: design, hierarchy_rank: junior, onboarding_status: true)
-arthur = User.create!(email: "arthur@example.com", password: "password", first_name: "Arthur", last_name: "Mariot", company: zapier, team: product, hierarchy_rank: junior, onboarding_status: true)
-jeanne = User.create!(email: "jeanne@example.com", password: "password", first_name: "Jeanne", last_name: "Parrot", company: zapier, team: hr, hierarchy_rank: junior)
-marie = User.create!(email: "marie@example.com", password: "password", first_name: "Marie", last_name: "Pavet", company: zapier, team: sales, hierarchy_rank: junior)
-julien = User.create!(email: "julien@example.com", password: "password", first_name: "Julien", last_name: "Perrault", company: zapier, team: sales, hierarchy_rank: head)
+emma = User.create!(email: "emma@example.com", password: "password", first_name: "Emma", last_name: "Bruno", company: zapier, team: hr, hierarchy_rank: head, location: "San Francisco", avatar: "https://thispersondoesnotexist.com/image")
+louis = User.create!(email: "louis@example.com", password: "password", first_name: "Louis", last_name: "Uguen", company: zapier, team: product, hierarchy_rank: senior, onboarding_status: true, location: "Brest", avatar: "https://thispersondoesnotexist.com/image")
+edouard = User.create!(email: "edouard@example.com", password: "password", first_name: "Edouard", last_name: "Uguen", company: zapier, team: design, hierarchy_rank: junior, onboarding_status: true, location: "Marseille", avatar: "https://thispersondoesnotexist.com/image")
+arthur = User.create!(email: "arthur@example.com", password: "password", first_name: "Arthur", last_name: "Mariot", company: zapier, team: product, hierarchy_rank: junior, onboarding_status: true, location: "Londres", avatar: "https://thispersondoesnotexist.com/image")
+jeanne = User.create!(email: "jeanne@example.com", password: "password", first_name: "Jeanne", last_name: "Parrot", company: zapier, team: hr, hierarchy_rank: junior, location: "San Francisco", avatar: "https://thispersondoesnotexist.com/image")
+marie = User.create!(email: "marie@example.com", password: "password", first_name: "Marie", last_name: "Pavet", company: zapier, team: sales, hierarchy_rank: junior, location: "San Francisco", avatar: "https://thispersondoesnotexist.com/image")
+julien = User.create!(email: "julien@example.com", password: "password", first_name: "Julien", last_name: "Perrault", company: zapier, team: sales, hierarchy_rank: head, location: "San Francisco", avatar: "https://thispersondoesnotexist.com/image")
+
+charles = User.create!(email: "charles@example.com", password: "password", first_name: "Charles", last_name: "Bruno", company: zapier, team: hr, hierarchy_rank: head, location: "Nantes", avatar: "https://thispersondoesnotexist.com/image")
+jean = User.create!(email: "jean@example.com", password: "password", first_name: "Jean", last_name: "Uguen", company: zapier, team: product, hierarchy_rank: senior, onboarding_status: true, location: "Los Angeles", avatar: "https://thispersondoesnotexist.com/image")
+marie = User.create!(email: "marie@example.com", password: "password", first_name: "Marie", last_name: "Uguen", company: zapier, team: design, hierarchy_rank: junior, onboarding_status: true, location: "Miami", avatar: "https://thispersondoesnotexist.com/image")
+bernard = User.create!(email: "bernard@example.com", password: "password", first_name: "Bernard", last_name: "Mariot", company: zapier, team: product, hierarchy_rank: junior, onboarding_status: true, location: "Bordeaux", avatar: "https://thispersondoesnotexist.com/image")
+brieux = User.create!(email: "brieux@example.com", password: "password", first_name: "Brieux", last_name: "Parrot", company: zapier, team: hr, hierarchy_rank: junior, location: "Naples", avatar: "https://thispersondoesnotexist.com/image")
+catherine = User.create!(email: "catherine@example.com", password: "password", first_name: "Catherine", last_name: "Pavet", company: zapier, team: sales, hierarchy_rank: junior, location: "Rome", avatar: "https://thispersondoesnotexist.com/image")
+christian = User.create!(email: "christian@example.com", password: "password", first_name: "Christian", last_name: "Perrault", company: zapier, team: sales, hierarchy_rank: head, location: "Barcelone", avatar: "https://thispersondoesnotexist.com/image")
+
+claire = User.create!(email: "claire@example.com", password: "password", first_name: "Claire", last_name: "Bruno", company: zapier, team: hr, hierarchy_rank: head, location: "Barcelone", avatar: "https://thispersondoesnotexist.com/image")
+lorenzo = User.create!(email: "lorenzo@example.com", password: "password", first_name: "Lorenzo", last_name: "Uguen", company: zapier, team: product, hierarchy_rank: senior, onboarding_status: true, location: "Madrid", avatar: "https://thispersondoesnotexist.com/image")
+jacques = User.create!(email: "jacques@example.com", password: "password", first_name: "Jacques", last_name: "Uguen", company: zapier, team: design, hierarchy_rank: junior, onboarding_status: true, location: "New-York", avatar: "https://thispersondoesnotexist.com/image")
+caroline = User.create!(email: "caroline@example.com", password: "password", first_name: "Caroline", last_name: "Mariot", company: zapier, team: product, hierarchy_rank: junior, onboarding_status: true, location: "Oslo", avatar: "https://thispersondoesnotexist.com/image")
+mesrine = User.create!(email: "mesrine@example.com", password: "password", first_name: "Mesrine", last_name: "Parrot", company: zapier, team: hr, hierarchy_rank: junior, location: "Bruxelles", avatar: "https://thispersondoesnotexist.com/image")
+phillipe = User.create!(email: "phillipe@example.com", password: "password", first_name: "Phillipe", last_name: "Pavet", company: zapier, team: sales, hierarchy_rank: junior, location: "Paris", avatar: "https://thispersondoesnotexist.com/image")
+briac = User.create!(email: "briac@example.com", password: "password", first_name: "Briac", last_name: "Perrault", company: zapier, team: sales, hierarchy_rank: head, location: "Lille", avatar: "https://thispersondoesnotexist.com/image")
+
+marc = User.create!(email: "marc@example.com", password: "password", first_name: "Mcamillearc", last_name: "Bruno", company: zapier, team: hr, hierarchy_rank: head, location: "Londres", avatar: "https://thispersondoesnotexist.com/image")
+camille = User.create!(email: "camille@example.com", password: "password", first_name: "Camille", last_name: "Uguen", company: zapier, team: product, hierarchy_rank: senior, onboarding_status: true, location: "Londres", avatar: "https://thispersondoesnotexist.com/image")
+george = User.create!(email: "george@example.com", password: "password", first_name: "George", last_name: "Uguen", company: zapier, team: design, hierarchy_rank: junior, onboarding_status: true, location: "Dublin", avatar: "https://thispersondoesnotexist.com/image")
+kevin = User.create!(email: "kevin@example.com", password: "password", first_name: "Kevin", last_name: "Mariot", company: zapier, team: product, hierarchy_rank: junior, onboarding_status: true, location: "Dublin", avatar: "https://thispersondoesnotexist.com/image")
+jeannus = User.create!(email: "jeannus@example.com", password: "password", first_name: "Jeannus", last_name: "Parrot", company: zapier, team: hr, hierarchy_rank: junior, location: "Dublin", avatar: "https://thispersondoesnotexist.com/image")
+eric = User.create!(email: "eric@example.com", password: "password", first_name: "Eric", last_name: "Pavet", company: zapier, team: sales, hierarchy_rank: junior, location: "Londres", avatar: "https://thispersondoesnotexist.com/image")
+mickael = User.create!(email: "mickael@example.com", password: "password", first_name: "Mickael", last_name: "Perrault", company: zapier, team: sales, hierarchy_rank: head, location: "Paris", avatar: "https://thispersondoesnotexist.com/image")
 puts 'Finished users!'
 
