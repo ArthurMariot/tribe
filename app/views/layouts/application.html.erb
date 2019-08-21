@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
+
+    <% unless current_user.onboarding_status == true %>
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
+    <% end %>
     <%= yield %>
 
     <%= javascript_include_tag 'application' %>
