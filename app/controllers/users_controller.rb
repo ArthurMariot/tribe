@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   def index
     @users = User.geocoded
 
-    @markers = @users.map do |user|
+    @team = Team.where(name: params[:query])
+    @users_by_team = User.where(team: @team).geocoded
+
+
+    @markers = @users_by_team.map do |user|
       {
         lat: user.latitude,
         lng: user.longitude,
