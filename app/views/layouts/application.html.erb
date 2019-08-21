@@ -12,7 +12,7 @@
   </head>
   <body>
 
-    <% unless current_user.onboarding_status == true %>
+    <% if  current_user.nil? ||(current_user.onboarding_status == false)  %>
       <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>
     <% end %>
