@@ -4,6 +4,7 @@ class HrManagers::CompaniesController < ApplicationController
   end
 
   def update
+    raise
     @company = current_user.company
     if @company.update(company_params)
       redirect_to hr_managers_features_path

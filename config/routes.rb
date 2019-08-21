@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   namespace :hr_managers do
     get 'features', to: 'pages#features', as: 'features'
-    resources :employees, only: [:new, :create, :index]
+    resources :users, only: [:new, :create, :index]
     resources :companies, only: [:edit, :update]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
