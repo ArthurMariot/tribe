@@ -1,1 +1,22 @@
-<h1>hello test pour HR manager</h1>
+<h1>Manage your onboarding</h1>
+
+<div class="container">
+ <% @employees.each do |employee| %>
+   <div class="onboarded-employee-infos">
+         <img src="https://miro.medium.com/max/1400/1*XX2X4OtFiQTdYV3OtIlAIg.png(122 ko)
+https://miro.medium.com/max/1400/1*XX2X4OtFiQTdYV3OtIlAIg.png
+" alt="" class="logo-sm">
+         <h3><%= employee.first_name %> <%= employee.first_name %></h3>
+         <h4><%= employee.job_title %> </h4>
+         <h4><%= employee.team.name %> </h4>
+         <strong><%= employee.last_name %></strong></p>
+     </div>
+     <div class="onboarding-status-infos">
+         <div class="progression-bar">
+           <span>onboarding</span>
+           <span> % progression</span>
+           <a>checklist</a>
+         </div>
+     </div>
+ <% end %>
+</div>

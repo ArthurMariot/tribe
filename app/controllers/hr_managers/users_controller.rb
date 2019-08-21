@@ -1,4 +1,9 @@
 class HrManagers::UsersController < ApplicationController
+
+  def index
+    @employees = User.where(onboarding_status: true)
+  end
+
   def new
     @employee = User.new
   end
