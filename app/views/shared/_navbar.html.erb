@@ -9,7 +9,7 @@
     <ul class="navbar-nav mr-auto">
       <div class="nav-center">
         <% if current_user.nil? %>
-          <a href="#">LOG IN</a>
+          <a href="<%= user_session_path %>">LOG IN</a>
           <a href="#">SIGN UP</a>
         <% else %>
           <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= current_user.avatar %>" />
