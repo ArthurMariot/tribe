@@ -1,1 +1,53 @@
-<%= @company.name %>
+<div class="container">
+
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= @company.photo_header %>);">
+      <h1> <%= @company.name %></h1>
+  </div>
+
+
+<div class="description">
+    <div class="description-infos">
+        <h2>Description</h2>
+        <p><%= @company.short_description %></p>
+    </div>
+    <img src=" <%= @company.photo_description %> " />
+</div>
+
+<h2>Our values</h2>
+
+  <div class="values">
+
+    <% @company.values.each do |value| %>
+    <div class="card-value">
+      <img src=" <%= value.value_category.picto_url %> " />
+      <div class="card-value-infos">
+        <p> <strong><%= value.title %></strong> </p>
+        <p><%= value.content %></p>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+
+<div class="social-medias">
+  <h2>Social medias</h2>
+
+  <div class="footer-links">
+      <a href="<%= @company.github_url %>" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="<%= @company.facebook_url %>"target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="<%= @company.twitter_url %>"target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="<%= @company.linkedin_url %>"target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</div>
+
+<div class="button-next">
+
+<a href="<%= edit_user_registration_path %>">
+  <i class="fas fa-arrow-right"></i>
+</a>
+
+</div>
+
+
+
+</div>
