@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     resources :users, only: [:new, :create, :index]
     resources :companies, only: [:edit, :update]
   end
-
-  resources :users, only: [:index, :show]
+  get 'features', to: 'pages#features', as: 'features'
+  resources :users, only: [:index, :show] do
+    get 'welcome', to: 'pages#welcome', as: 'welcome'
+  end
   resources :companies, only: [:show]
 end

@@ -6,4 +6,7 @@ class PagesController < ApplicationController
 
   def features
   end
+
+  def welcome
+  end
 end
