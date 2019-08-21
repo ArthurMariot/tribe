@@ -1,0 +1,23 @@
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 140px;
+}
+
+.feature-card {
+  width: 290px;
+  height: 240px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  text-align: center;
+  padding: 24px 24px;
+}
+
+.logo-sm {
+  height: 70px;
+  object-fit: contain;
+  display: inline;
+  margin-bottom: 16px;
+}
+
+

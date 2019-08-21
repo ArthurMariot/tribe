@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="features">
+<a href="<%= edit_hr_managers_company_path(current_user.company)%>">
+    <div class="feature-card">
+        <div class="card-mission-img">
+          <%= image_tag "company.svg", class: "logo-sm" %>
+            <!-- <img src="https://miro.medium.com/max/1400/1*XX2X4OtFiQTdYV3OtIlAIg.png" alt="" class="logo-sm"> -->
+        </div>
+        <div class="feature-card-title">
+          <p> <strong>Company details </strong></p>
+        </div>
+        <div class="feature-card-info">
+          <p>Will be used to complete your company presentation</p>
+        </div>
+    </div>
+</a>
+<a href=" <%= new_hr_managers_employee_path %>">
+    <div class="feature-card">
+        <div class="card-mission-img">
+          <%= image_tag "add-employee.svg", class: "logo-sm" %>
+        </div>
+        <div class="feature-card-title">
+          <p> <strong>Add a new employee</strong></p>
+        </div>
+        <div class="feature-card-info">
+          <p>Complete all the informations needed to start an onboarding</p>
+        </div>
+    </div>
+</a>
+<a href="<%= hr_managers_employees_path %>">
+    <div class="feature-card">
+        <div class="card-mission-img">
+          <%= image_tag "manage-employee.svg", class: "logo-sm" %>
+        </div>
+        <div class="feature-card-title">
+          <p> <strong>Manage your onboarding</strong></p>
+        </div>
+        <div class="feature-card-info">
+          <p>Access and follow all ongoing onboarding</p>
+        </div>
+    </div>
+</a>
+</div>
+</div>
