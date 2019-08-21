@@ -1,6 +1,6 @@
 #map {
-  border-radius: 12px;
-   margin-left: auto;
+  border-radius: 8px;
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -20,4 +20,45 @@
       font-weight: bold;
       color: $blue
     }
+}
+
+#search-map {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+}
+
+.search-form-control {
+  position: relative;
+   z-index: 1;
+}
+
+.search-form-control .btn-green {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+  // color: white;
+  // padding: 8px 24px;
+  // border-radius: 50px;
+  // background: blue;
+  // transition: background 0.3s ease;
+}
+
+.search-form-control .btn-flat:hover {
+  opacity: 0.7;
+}
+
+
+
+.search-form-control .form-control {
+  height: 3.5rem;
+  border-radius: 8px;
+
+}
+
+.search-form-control .form-control:focus {
+  border: 1px solid blue;
+  outline: none !important;
 }
