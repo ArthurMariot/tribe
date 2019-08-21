@@ -6,4 +6,6 @@ class User < ApplicationRecord
   belongs_to :company
   belongs_to :team
   belongs_to :hierarchy_rank
+  geocoded_by :location
+  after_validation :geocode
 end
