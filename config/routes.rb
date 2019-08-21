@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :users, only: [:new, :create, :index]
     resources :companies, only: [:edit, :update]
   end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users, only: [:index, :show]
+  resources :companies, only: [:show]
 end
