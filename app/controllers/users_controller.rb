@@ -19,4 +19,21 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = current_user
+    if @current_user.update(user_params)
+      redirect_to users_path
+    else
+      render :edit
+    end
+  end
+
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account)
+  end
 end

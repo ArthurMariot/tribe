@@ -10,10 +10,12 @@ class User < ApplicationRecord
   geocoded_by :location
   after_validation :geocode
 
-
   pg_search_scope :search_by_team,
     against: [:team],
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
+
+  mount_uploader :avatar, AvatarUploader
+
 end
