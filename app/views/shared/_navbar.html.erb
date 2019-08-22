@@ -12,11 +12,8 @@
           <a href="<%= user_session_path %>">LOG IN</a>
           <a href="#">SIGN UP</a>
         <% else %>
-          <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= current_user.avatar %>" />
-          <%= cl_image_tag @current_user.photo, height: 300, width: 400, crop: :fill, class:"avatar" class: "dropdown-toggle" id:"navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" %>
-
+         <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= cl_image_path current_user.avatar %>" >
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
           <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
         </div>
         <% end %>
