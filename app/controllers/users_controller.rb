@@ -33,25 +33,23 @@ class UsersController < ApplicationController
     end
   end
 
-
   def progress
     @user = current_user
     @score = 0
-    @user.first_name != "" ? @score : @score += 1
-    @user.last_name != "" ? @score : @score += 1
-    @user.avatar != "" ? @score : @score += 1
-    @user.hobby_1 != "" ? @score : @score += 1
-    @user.hobby_2 != "" ? @score : @score += 1
-    @user.hobby_3 != "" ? @score : @score += 1
-    @user.location != "" ? @score : @score += 1
-    @user.linkedin_url != "" ? @score : @score += 1
-    @user.slack_account != "" ? @score : @score += 1
-    @user.personal_mail != "" ? @score : @score += 1
+    @user.first_name != "" ? @score += 1 : @score
+    @user.last_name != "" ? @score += 1 : @score
+    @user.avatar != "" ? @score += 1 : @score
+    @user.hobby_1 != "" ? @score += 1 : @score
+    @user.hobby_2 != "" ? @score += 1 : @score
+    @user.hobby_3 != "" ? @score += 1 : @score
+    @user.location != "" ? @score += 1 : @score
+    @user.linkedin_url != "" ? @score += 1 : @score
+    @user.slack_account != "" ? @score += 1 : @score
+    @user.personal_mail != "" ? @score += 1 : @score
     return @score
   end
 
-
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar)
+    params.require(:user).permit(:location, :linkedin_url, :hobby_1, :hobby_2, :hobby_3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar)
   end
 end
