@@ -1,8 +1,16 @@
 
     <div class="sidebar">
+        <div class="user-infos">
+          <img class="avatar-large dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= cl_image_path current_user.avatar %>" >
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
+        </div>
+          <p> <%= current_user.first_name %> <%= current_user.last_name %></p>
+        </div>
+
         <div class="onboarding-step">
             <ul>
-                <a href="#">
+                <a href=" <%= company_path(current_user.company) %> ">
                     <p>
                         <li> <i class="fab fa-slack-hash"></i>Discover the company</li>
                     </p>
@@ -19,9 +27,10 @@
                 </a>
                 <a href="">
                     <p>
-                        <li><i class="fas fa-lock"></i>TODO list</li>
+                        <li><i class="fas fa-lock"></i>Documents</li>
                     </p>
                 </a>
+                <li> <%= render 'shared/progressionbar' %></li>
             </ul>
         </div>
   </div>
