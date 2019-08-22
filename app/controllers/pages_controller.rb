@@ -6,10 +6,12 @@ class PagesController < ApplicationController
   end
 
   def features
-    # current_user.visit_pages2 = true
-  end
+   current_user.visit_pages3 = true
+   current_user.save
+ end
 
-  def welcome
-    # current_user.visit_pages3 = true
-  end
+ def welcome
+   current_user.visit_pages2 = true
+   current_user.save
+ end
 end
