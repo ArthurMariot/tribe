@@ -3,8 +3,15 @@ class UsersController < ApplicationController
     @users = User.geocoded
     current_user.visit_pages1 = true
     current_user.save
-    @team = Team.where(name: params[:query])
-    @users_by_team = User.where(team: @team).geocoded
+
+    @team = Team.where("name ILIKE ?", "%#{params[:query]}%")
+
+    if params[:query].present?
+      @users_by_team = User.where(team: @team).geocoded
+    else
+      @users_by_team = User.all.geocoded
+    end
+
     @markers = @users_by_team.map do |user|
       {
         lat: user.latitude,
@@ -55,10 +62,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-
     params.require(:user).permit(:location, :linkedin_url, :hobby_1, :hobby_2, :hobby_3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar)
-
-
 
   end
 end
