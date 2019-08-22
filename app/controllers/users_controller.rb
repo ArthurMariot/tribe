@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   def index
     @users = User.geocoded
-
+    current_user.visit_pages1 = true
+    current_user.save
     @team = Team.where(name: params[:query])
     @users_by_team = User.where(team: @team).geocoded
     @markers = @users_by_team.map do |user|
@@ -46,6 +47,10 @@ class UsersController < ApplicationController
     @user.linkedin_url != "" ? @score += 1 : @score
     @user.slack_account != "" ? @score += 1 : @score
     @user.personal_mail != "" ? @score += 1 : @score
+    @user.visit_pages4 != "" ? @score += 1 : @score
+    @user.visit_pages3 != "" ? @score += 1 : @score
+    @user.visit_pages2 != "" ? @score += 1 : @score
+    @user.visit_pages1 != "" ? @score += 1 : @score
     return @score
   end
 
