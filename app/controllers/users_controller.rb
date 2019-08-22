@@ -14,6 +14,9 @@ class UsersController < ApplicationController
         image_url: helpers.asset_url(user.avatar)
       }
     end
+
+    @geojson = build_geojson
+
   end
 
   def show
@@ -33,7 +36,17 @@ class UsersController < ApplicationController
     end
   end
 
+  private
+
   def user_params
     params.require(:user).permit(:first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account)
   end
+
+  def build_geojson
+    {
+    type: "FeatureCollection",
+    features: @users
+    }
+  end
+
 end
