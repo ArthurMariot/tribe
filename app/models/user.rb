@@ -17,5 +17,9 @@ class User < ApplicationRecord
     }
 
   mount_uploader :avatar, AvatarUploader
+  mount_uploader :contract_pdf, FilespdfUploader
+  mount_uploader :upload_contrat, FilespdfUploader
+  mount_uploader :rules_reglementation_pdf, FilespdfUploader
+  mount_uploader :upload_internal_rules, FilespdfUploader
 
 end
