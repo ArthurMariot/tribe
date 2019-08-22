@@ -74,9 +74,11 @@ p, a, span{
 .navbar-exist {
   height: calc(100vh - 90px);
   width: 100vw;
+  padding: 61px;
 }
 
 .sidebar-exist {
   height: 100vh;
   width: calc(100vw - 230px);
+  padding: 61px;
 }
