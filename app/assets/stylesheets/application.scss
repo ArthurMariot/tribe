@@ -14,7 +14,6 @@
 
 body {
   background: #ffff;
-  padding-top: 120px;
 }
 
 ul {
@@ -61,4 +60,21 @@ a {
 
 p, a, span{
   color: gray;
+}
+
+.main-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+}
+
+.navbar-exist {
+  height: calc(100vh - 90px);
+  width: 100vw;
+}
+
+.sidebar-exist {
+  height: 100vh;
+  width: calc(100vw - 230px);
 }

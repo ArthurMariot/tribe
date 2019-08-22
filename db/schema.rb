@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(version: 2019_08_21_122703) do
     t.integer "founded_in"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "zipcode"
-    t.string "website_url"
-    t.string "city"
+    t.string "zipcode", default: ""
+    t.string "website_url", default: ""
+    t.string "city", default: ""
   end
 
   create_table "hierarchy_ranks", force: :cascade do |t|

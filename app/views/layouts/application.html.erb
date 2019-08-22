@@ -12,13 +12,26 @@
   </head>
   <body>
 
-    <% unless current_user.onboarding_status == true %>
+    <div class="content">
+
+    <% if  current_user.nil? || (current_user.onboarding_status == false)  %>
       <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>
+    <% else %>
+      <%= render 'shared/sidebar' %>
     <% end %>
-    <%= yield %>
+
+    <div class="main-wrapper
+      <% if  current_user.nil? || (current_user.onboarding_status == false)  %>
+      navbar-exist
+    <% else %>
+      sidebar-exist
+    <% end %>">
+      <%= yield %>
+    </div>
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+    </div>
   </body>
 </html>

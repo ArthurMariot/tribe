@@ -1,3 +1,4 @@
+
 <form novalidate="novalidate" class="simple_form search" id="search-map" action="#" accept-charset="UTF-8" method="get">
     <input name="utf8" type="hidden" value="&#x2713;" />
     <div class="search-form-control form-group">
@@ -8,5 +9,7 @@
     </div>
 </form>
 
-<div id="map" style="width: 80%;
-  height: 550px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  <div id="map" style="width: 80%;
+  height: 550px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
