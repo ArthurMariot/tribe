@@ -1,7 +1,7 @@
 .features {
   display: flex;
   justify-content: space-between;
-  margin-top: 140px;
+  margin-top: 110px;
 }
 
 .feature-card {
@@ -11,6 +11,16 @@
   border-radius: 5px;
   text-align: center;
   padding: 24px 24px;
+
+  h4 {
+    color: $blue;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }
 
 .logo-sm {

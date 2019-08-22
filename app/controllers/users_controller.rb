@@ -20,6 +20,9 @@ class UsersController < ApplicationController
         image_url: helpers.asset_url(user.avatar)
       }
     end
+
+    @geojson = build_geojson
+
   end
 
   def show
@@ -43,6 +46,9 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
+
+  private
 
   def progress
     @user = current_user
