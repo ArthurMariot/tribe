@@ -3,8 +3,15 @@ class UsersController < ApplicationController
     @users = User.geocoded
     current_user.visit_pages1 = true
     current_user.save
-    @team = Team.where(name: params[:query])
-    @users_by_team = User.where(team: @team).geocoded
+
+    @team = Team.where("name ILIKE ?", "%#{params[:query]}%")
+
+    if params[:query].present?
+      @users_by_team = User.where(team: @team).geocoded
+    else
+      @users_by_team = User.all.geocoded
+    end
+
     @markers = @users_by_team.map do |user|
       {
         lat: user.latitude,
