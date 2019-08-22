@@ -1,16 +1,3 @@
-// .sidebar {
-//   padding: 80px 16px 16px 16px;
-//   width: 2000px;
-//   background: $blue;
-//   font-weight: bold;
-//   color: #F5F5F5;
-//   height: 100vh;
-//   margin-right: 50px;
-//   position: sticky;
-//   -webkit-position: sticky;
-//   display: flex;
-// }
-
 .sidebar {
  height: 100%;
  width: 230px;
@@ -23,6 +10,17 @@
  font-weight: bold;
  overflow-x: hidden;
  padding-top: 20px;
+}
+
+.sidebar .user-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar .user-infos img {
+  margin-bottom: 12px;
 }
 
 .sidebar li {

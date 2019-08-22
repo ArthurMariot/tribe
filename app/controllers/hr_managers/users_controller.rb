@@ -15,6 +15,7 @@ class HrManagers::UsersController < ApplicationController
     new_employee.company = current_user.company
     new_employee.email = params[:user][:corporate_mail]
     new_employee.password = '123456'
+    new_employee.onboarding_status = true
     new_employee.team = Team.find_by(name: params[:user][:team])
     new_employee.hierarchy_rank = HierarchyRank.find_by(name: params[:user][:hierarchy_rank])
     if new_employee.save!
@@ -27,6 +28,10 @@ class HrManagers::UsersController < ApplicationController
   private
 
   def user_params
+
     params.require(:user).permit(:location, :linkedin_url,:hobby1,:hobby2 ,:hobby3,:first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar)
+
+
+
   end
 end

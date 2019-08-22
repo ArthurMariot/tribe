@@ -11,6 +11,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/onboardings";
+@import "pages/welcome";
 
 body {
   background: #ffff;
@@ -72,9 +74,11 @@ p, a, span{
 .navbar-exist {
   height: calc(100vh - 90px);
   width: 100vw;
+  padding: 61px;
 }
 
 .sidebar-exist {
   height: 100vh;
   width: calc(100vw - 230px);
+  padding: 61px;
 }
