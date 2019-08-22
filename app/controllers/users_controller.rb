@@ -25,7 +25,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     progress(@user)
-    raise
   end
 
   def edit
@@ -35,7 +34,11 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @current_user.update(user_params)
-      redirect_to users_path
+      if params['user']['upload_contrat'] || params['user']['upload_internal_rules']
+        redirect_to user_documents_path(@user)
+      else
+        redirect_to users_path
+      end
     else
       render :edit
     end
@@ -62,7 +65,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:location, :linkedin_url, :hobby_1, :hobby_2, :hobby_3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar)
-
+    params.require(:user).permit(:location, :linkedin_url, :hobby_1, :hobby_2, :hobby_3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar, :upload_contrat, :upload_internal_rules)
   end
 end

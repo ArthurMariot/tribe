@@ -1,29 +1,37 @@
 <div class="content">
-<h1>Your documents</h1>
-<h2>Please <%= current_user.first_name %>, </h2>
-<p>take time to read the following documents and send them back to your RH (name of the HR manager) once you <strong>have signed them</strong> :) </p>
+<h1>Your official documents</h1>
+<h2>Hello <%= current_user.first_name %>, </h2>
+<p>take time to read & sign the following documents. Send them back to your HR referee once <strong>signed</strong> :) </p>
 
   <div class="pdf-files">
       <div class="contract-pdf">
-        <h2>Your contract</h2>
-        <img src="https://p7.hiclipart.com/preview/16/756/862/adobe-acrobat-adobe-indesign-interactive-digital-publishing-tips-techniques-and-workarounds-for-formatting-across-your-devices-adobe-reader-portable-document-format-pdf-icon-symbol-thumbnail.jpg" >
-        <a class="btn-blue">upload</a>
+        <h3>1-Download your employment contract</h3>
+        <a href="<%= current_user.upload_contrat.url %>" download, target="-blank">
+          <img src="https://p7.hiclipart.com/preview/16/756/862/adobe-acrobat-adobe-indesign-interactive-digital-publishing-tips-techniques-and-workarounds-for-formatting-across-your-devices-adobe-reader-portable-document-format-pdf-icon-symbol-thumbnail.jpg" >
+        </a>
+        <h3>2-Read it carrefully</h3>
+        <p>Feel free to contact your HR referee if you have any questions :)</p>
+        <div upload-command>
+          <h3>3-Sign it and upload it below</h3>
           <%= simple_form_for current_user, method: :patch do |f| %>
-          <%= f.input :upload_contrat %>
-          <%= f.submit "upload" %>
+          <%= f.input :upload_contrat, label: false %>
+          <%= f.submit "upload", class: "btn-blue" %>
           <% end %>
+        </div>
       </div>
-  </div>
-  <div class="pdf-files">
-    <div class="internal-rules-pdf">
-      <h2>Your internal rules</h2>
-      <img src="https://p7.hiclipart.com/preview/16/756/862/adobe-acrobat-adobe-indesign-interactive-digital-publishing-tips-techniques-and-workarounds-for-formatting-across-your-devices-adobe-reader-portable-document-format-pdf-icon-symbol-thumbnail.jpg" >
-      <a class="btn-blue">upload</a>
-        <%= simple_form_for current_user, method: :patch do |f| %>
-        <%= f.input :upload_internal_rules %>
-        <%= f.submit "upload" %>
-        <% end %>
+      <div class="internal-rules-pdf">
+        <h3>1-Download your internal rules</h3>
+        <a href="<%= current_user.rules_reglementation_pdf.url %>" download, target="-blank">
+          <img src="https://p7.hiclipart.com/preview/16/756/862/adobe-acrobat-adobe-indesign-interactive-digital-publishing-tips-techniques-and-workarounds-for-formatting-across-your-devices-adobe-reader-portable-document-format-pdf-icon-symbol-thumbnail.jpg" >
+        </a>
+          <h3>2-Read it carrefully</h3>
+          <p>Don't hesitate to contact your HR referee or your buddies if you have any questions :)</p>
+        <div upload-command>
+          <h3>3-Sign it and upload it below</h3>
+          <%= simple_form_for current_user, method: :patch do |f| %>
+          <%= f.input :upload_internal_rules, label: false %>
+          <%= f.submit "upload", class: "btn-blue" %>
+          <% end %>
+        </div>
     </div>
-  </div>
-
 </div>
