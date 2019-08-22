@@ -1,4 +1,5 @@
 class HrManagers::UsersController < ApplicationController
+  after_create :send_welcome_email
 
   def index
     @employees = User.where(onboarding_status: true)
@@ -28,5 +29,9 @@ class HrManagers::UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar)
+  end
+
+  def send_welcome_email
+    UserMailer.with(user: self).welcome.deliver_now
   end
 end
