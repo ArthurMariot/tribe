@@ -12,4 +12,5 @@ Rails.application.routes.draw do
     get 'welcome', to: 'pages#welcome', as: 'welcome'
   end
   resources :companies, only: [:show]
+  get 'progress', to: 'users#progress', as: 'progress'
 end

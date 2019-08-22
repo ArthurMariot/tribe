@@ -1,6 +1,7 @@
 class HrManagers::UsersController < ApplicationController
 
   def index
+    raise
     @employees = User.where(onboarding_status: true)
   end
 
@@ -26,6 +27,6 @@ class HrManagers::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar)
+    params.require(:user).permit(:location, :linkedin_url,:hobby1,:hobby2 ,:hobby3,:first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar)
   end
 end
