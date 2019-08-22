@@ -7,7 +7,6 @@
  left: 0;
  background-color: $blue;
  color: #F5F5F5;
- font-weight: bold;
  overflow-x: hidden;
  padding-top: 20px;
 }
@@ -17,6 +16,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: $green;
+  margin-top: 16px;
+}
+
+.sidebar .user-infos p {
+  color: $green;
 }
 
 .sidebar .user-infos img {
@@ -28,7 +33,6 @@
 }
 
 
-
 .sidebar i {
 padding: 16px 10px;
 }
@@ -36,14 +40,16 @@ padding: 16px 10px;
 
 .sidebar a {
   color: #F5F5F5;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600px;
   text-decoration: none;
 }
 
 
-.sidebar a:hover {
-  opacity: 0.5;
+.sidebar .onboarding-step li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  margin: 0 8px;
+  padding: 0;
 }
-
-
 
