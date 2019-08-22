@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     get 'documents', to: 'pages#documents', as: 'documents'
   end
   resources :companies, only: [:show]
+  get 'progress', to: 'users#progress', as: 'progress'
 end

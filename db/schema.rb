@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_21_122703) do
+ActiveRecord::Schema.define(version: 2019_08_22_134813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -107,6 +107,15 @@ ActiveRecord::Schema.define(version: 2019_08_21_122703) do
     t.boolean "onboarding_status", default: false
     t.float "latitude"
     t.float "longitude"
+    t.boolean "visit_pages1", default: false
+    t.boolean "visit_pages2", default: false
+    t.boolean "visit_pages3", default: false
+    t.boolean "visit_pages4", default: false
+    t.boolean "visit_pages5", default: false
+    t.boolean "visit_pages6", default: false
+    t.boolean "visit_pages7", default: false
+    t.string "upload_contrat"
+    t.string "upload_internal_rules"
     t.index ["company_id"], name: "index_users_on_company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["hierarchy_rank_id"], name: "index_users_on_hierarchy_rank_id"
