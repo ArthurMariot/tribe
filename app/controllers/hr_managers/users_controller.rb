@@ -1,4 +1,5 @@
 class HrManagers::UsersController < ApplicationController
+  after_create :send_welcome_email
 
   def index
     raise
@@ -33,5 +34,9 @@ class HrManagers::UsersController < ApplicationController
 
 
 
+  end
+
+  def send_welcome_email
+    UserMailer.with(user: self).welcome.deliver_now
   end
 end
