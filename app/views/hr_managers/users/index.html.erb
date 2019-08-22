@@ -1,17 +1,24 @@
 <h1>Manage your onboarding</h1>
 
 <div class="container">
-  <% @users.each do |user| %>
+
+  <div class="onboarding-cards">
+  <% @employees.each do |employee| %>
+
     <div class="onboarding-card">
       <div class="onboarded-employee-infos">
           <div class="onboarded-employee-infos-personal">
-            <%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill class:"avatar-large" %>
-            <h2><%= user.first_name %> <strong><%= user.last_name %></strong></h2>
+            <% if employee.avatar.url.nil? %>
+              <img class="avatar-large" src="https://fpcambler.org/wp-content/themes/church-emphasis/assets/dist/img/default-avatar.jpg" >
+            <% else %>
+              <img class="avatar-large" src="<%= cl_image_path employee.avatar %>" >
+            <% end %>
+            <h2><%= employee.first_name %> <strong><%= employee.last_name %></strong></h2>
           </div>
           <div>
-            <p><%= user.team.name %> </p>
+            <p><%= employee.team.name %> </p>
             <p>Rattachement à préciser</p>
-            <p>Buddy:<%= user.first_name %>  -  <strong> arrived:12 Sep 2019</strong</p>
+            <p>Buddy:<%= employee.first_name %>  -  <strong> arrived:12 Sep 2019</strong></p>
           </div>
       </div>
       <div class="onboarding-status-infos">
@@ -26,6 +33,7 @@
       </div>
     </div>
   <% end %>
+  </div>
 </div>
 
 

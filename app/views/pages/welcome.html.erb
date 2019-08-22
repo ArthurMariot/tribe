@@ -1,3 +1,7 @@
-
-
-<h1> Welcome onboard <%= current_user.first_name %> @  <%=  current_user.company.name  %></h1>
+<div class="container">
+  <div class="welcome-infos">
+    <h1> Welcome @ <%= current_user.company.name %> <%= current_user.first_name %> !</h1>
+    <img src="https://miro.medium.com/max/1400/1*XX2X4OtFiQTdYV3OtIlAIg.png" alt="welcome" class="image-lg">
+    <%= link_to "Start your onboarding", company_path(current_user.company), class: 'btn-green' %>
+  </div>
+</div>
