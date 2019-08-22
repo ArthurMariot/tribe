@@ -14,6 +14,7 @@ class HrManagers::UsersController < ApplicationController
     new_employee.company = current_user.company
     new_employee.email = params[:user][:corporate_mail]
     new_employee.password = '123456'
+    new_employee.onboarding_status = true
     new_employee.team = Team.find_by(name: params[:user][:team])
     new_employee.hierarchy_rank = HierarchyRank.find_by(name: params[:user][:hierarchy_rank])
     if new_employee.save!
