@@ -1,5 +1,9 @@
 .navbar {
-  margin-bottom: 40px !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 100vw;
 }
 
 .navbar-lewagon {
@@ -39,11 +43,11 @@ a:hover {
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+// .sticky {
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+// }
 
 .nav-center .dropdown-menu a {
   color: #1fe3cf;

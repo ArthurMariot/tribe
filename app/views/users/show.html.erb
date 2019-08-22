@@ -3,7 +3,7 @@
     <div class="cardside">
       <div class="card">
         <p class="ttitle"><%= @user.job_title %> </p>
-        <center> <%= cl_image_tag @current_user.photo, height: 300, width: 400, crop: :fill, class:"avatar-extra-large" %> </center>
+        <center> <img height: 300, width: 400, crop: :fill, class="avatar-extra-large" src="<%= cl_image_path @user.avatar %>" alt="avatar"> </center>
 
         <h3> <%= @user.first_name %> <%= @user.last_name %> </h3>
         <h4> <%= @user.location %></h4>

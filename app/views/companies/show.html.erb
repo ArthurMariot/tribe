@@ -1,32 +1,4 @@
 <!-- <div class="container"> -->
-<div class="page">
-    <div class="sidebar">
-        <div class="onboarding-step">
-            <ul>
-                <a href="#">
-                    <p>
-                        <li> <i class="fab fa-slack-hash"></i>Discover the company</li>
-                    </p>
-                </a>
-                <a href=" <%= edit_user_path(current_user.id) %> ">
-                    <p>
-                        <li><i class="fab fa-slack-hash"></i>Personal informations</li>
-                    </p>
-                </a>
-                <a href="<%= users_path %>">
-                    <p>
-                        <li><i class="fas fa-lock"></i>Meet your colleagues</li>
-                    </p>
-                </a>
-                <a href="">
-                    <p>
-                        <li><i class="fas fa-lock"></i>TODO list</li>
-                    </p>
-                </a>
-            </ul>
-        </div>
-    </div>
-    <div class="content-page">
         <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= @company.photo_header %>);">
             <h1>
                 <%= @company.name %>
@@ -66,11 +38,10 @@
             </div>
         </div>
         <div class="button-next">
-            <a href="<%= edit_user_registration_path %>">
+            <a href="<%= edit_user_path(current_user.id) %>">
                 <i class="fas fa-arrow-right"></i>
             </a>
         </div>
     </div>
-</div>
 <!-- </div> -->
 

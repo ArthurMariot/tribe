@@ -14,7 +14,7 @@
 .sidebar {
  height: 100%;
  width: 230px;
- position: fixed;
+ position: absolute;
  z-index: 1;
  top: 0;
  left: 0;
@@ -26,7 +26,7 @@
 }
 
 .sidebar li {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 
