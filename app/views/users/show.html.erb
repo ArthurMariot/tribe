@@ -2,8 +2,8 @@
   <div class="presentation">
     <div class="cardside">
       <div class="card">
-        <p class="ttitle"><%= @user.job_title %> </p>
-        <center> <img src="<%= @user.avatar %>" class="avatar-extra-large" alt=""> </center>
+        <p class="title"><%= @user.job_title %> </p>
+        <center><%= cl_image_tag @user.avatar, height: 300, width: 400, crop: :fill, class:"avatar-extra-large" %></center>
         <h3> <%= @user.first_name %> <%= @user.last_name %> </h3>
         <h4> <%= @user.location %></h4>
         <div class="socialcontainer">

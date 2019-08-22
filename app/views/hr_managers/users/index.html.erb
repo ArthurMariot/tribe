@@ -1,17 +1,17 @@
 <h1>Manage your onboarding</h1>
 
 <div class="container">
-  <% @employees.each do |employee| %>
+  <% @users.each do |user| %>
     <div class="onboarding-card">
       <div class="onboarded-employee-infos">
           <div class="onboarded-employee-infos-personal">
-            <img src=<%= employee.avatar %> class="avatar-large">
-            <h2><%= employee.first_name %> <strong><%= employee.last_name %></strong></h2>
+            <%= cl_image_tag @user.avatar, height: 300, width: 400, crop: :fill, class:"avatar-large" %>
+            <h2><%= user.first_name %> <strong><%= user.last_name %></strong></h2>
           </div>
           <div>
-            <p><%= employee.team.name %> </p>
+            <p><%= user.team.name %> </p>
             <p>Rattachement à préciser</p>
-            <p>Buddy:<%= employee.first_name %>  -  <strong> arrived:12 Sep 2019</strong</p>
+            <p>Buddy:<%= user.first_name %>  -  <strong> arrived:12 Sep 2019</strong</p>
           </div>
       </div>
       <div class="onboarding-status-infos">

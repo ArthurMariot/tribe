@@ -6,7 +6,8 @@
     <%= simple_form_for @user do |f| %>
     <table>
       <tr>
-      <%= f.input :first_name, label: 'profile picture' %> </tr>
+      <%= f.input :first_name, label: 'First name' %> </tr>
+      <%= f.input :avatar, label:"Profile picture"  %>
      <tr> hobbies</tr>
      <tr> <%= f.input :hobby_1, label: 'Hobby 1' %>
       <%= f.input :hobby_2, label: 'Hobby 2' %>
