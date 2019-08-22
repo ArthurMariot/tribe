@@ -9,4 +9,8 @@ class PagesController < ApplicationController
 
   def welcome
   end
+
+  def documents
+
+  end
 end

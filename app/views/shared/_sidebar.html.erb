@@ -2,7 +2,7 @@
     <div class="sidebar">
         <div class="onboarding-step">
             <ul>
-                <a href="#">
+                <a href=" <%= company_path(current_user.company) %> ">
                     <p>
                         <li> <i class="fab fa-slack-hash"></i>Discover the company</li>
                     </p>
@@ -17,9 +17,9 @@
                         <li><i class="fas fa-lock"></i>Meet your colleagues</li>
                     </p>
                 </a>
-                <a href="">
+                <a href="<%= user_documents_path(current_user) %>">
                     <p>
-                        <li><i class="fas fa-lock"></i>TODO list</li>
+                        <li><i class="fas fa-lock"></i>Documents</li>
                     </p>
                 </a>
             </ul>
