@@ -1,2 +1,30 @@
 // Import page-specific CSS files here.
 @import "home";
+
+#form-employee {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+
+    label {
+      color: $blue;
+    }
+
+    .form-control {
+      border-radius: 6px;
+    }
+
+    h5 {
+      color: $green;
+      text-align: left;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .btn-green {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    }
+}
