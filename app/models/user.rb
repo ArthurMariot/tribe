@@ -39,4 +39,5 @@ class User < ApplicationRecord
     self.visit_pages1 != "" ? @score += 1 : @score
     return @score
   end
+
 end
