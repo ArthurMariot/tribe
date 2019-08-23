@@ -30,7 +30,7 @@
                 <h5>Corporate information</h5>
                 <%= f.input :corporate_mail, label: 'Corporate email' %>
                 <%= f.input :department, label: 'Department', collection: ['Marketing', 'Sales', 'HR', 'Production', 'Account', 'Customer Service'] %>
-                <%= f.input :team, label: 'Team',collection: Team.all %>
+                <%= f.input :team, label: 'Team', collection: Team.all %>
                 <%= f.input :job_title, label: 'Job title' %>
                 <%= f.input :arrival_at, label: 'Date of arrival' %>
                 <%= f.input :slack_account, label: 'Slack account' %>

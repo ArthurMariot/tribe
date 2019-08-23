@@ -16,9 +16,8 @@
             <h2><%= employee.first_name %> <strong><%= employee.last_name %></strong></h2>
           </div>
           <div>
-            <p><%= employee.team.name %> </p>
-            <p>Rattachement à préciser</p>
-            <p>Buddy:<%= employee.first_name %>  -  <strong> arrived:12 Sep 2019</strong></p>
+            <p> <%= employee.job_title %> - Team <%= employee.team.name %> </p>
+            <p>First day:<%= employee.arrival_at %></p>
           </div>
       </div>
       <div class="onboarding-status-infos">
@@ -29,7 +28,6 @@
           <span>onboarding</span>
           <span> % progression</span>
         </div>
-        <a class="btn-blue">checklist</a>
       </div>
     </div>
   <% end %>
