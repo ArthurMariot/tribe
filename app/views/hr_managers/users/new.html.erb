@@ -1,23 +1,43 @@
 <div class="container">
-  <h2>New employee informations</h2>
-  <p>Fill in the employee information below, so we can create the onboarding process</p>
-
-  <div>
-    <%= simple_form_for [:hr_managers, @employee] do |f| %>
-      <%= f.input :first_name, label: 'First name' %>
-      <%= f.input :last_name, label: 'Last Name' %>
-      <%= f.input :location, label: 'Location' %>
-      <%= f.input :corporate_mail, label: 'Corporate email' %>
-      <%= f.input :personal_mail, label: 'Personal email' %>
-      <%= f.input :department, label: 'Department' %>
-      <%= f.input :team, label: 'Team' %>
-      <%= f.input :job_title, label: 'Job title' %>
-      <%= f.input :phone_number, label: 'Phone_number' %>
-      <%= f.input :arrival_at, label: 'Date of arrival' %>
-      <%= f.input :slack_account, label: 'Slack account' %>
-      <%= f.input :hierarchy_rank, label: 'Hierarchy Rank' %>
-      <%= f.button :submit, class:"btn-green" %>
-    <% end %>
-  </div>
+    <h2>New employee informations</h2>
+    <p>Fill in the employee information below to create the onboarding process</p>
+    <div id="form-employee">
+        <%= simple_form_for [:hr_managers, @employee] do |f| %>
+        <div class="row">
+            <div class="col">
+                <h5>Personal information</h5>
+                <div class="row">
+                    <div class="col">
+                        <%= f.input :first_name, label: 'First name' %>
+                    </div>
+                    <div class="col">
+                        <%= f.input :last_name, label: 'Last Name' %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <%= f.input :phone_number, label: 'Phone_number' %>
+                    </div>
+                    <div class="col">
+                        <%= f.input :location, label: 'Location' %>
+                    </div>
+                </div>
+                <%= f.input :personal_mail, label: 'Personal email' %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h5>Corporate information</h5>
+                <%= f.input :corporate_mail, label: 'Corporate email' %>
+                <%= f.input :department, label: 'Department', collection: ['Marketing', 'Sales', 'HR', 'Production', 'Account', 'Customer Service'] %>
+                <%= f.input :team, label: 'Team', collection: Team.all %>
+                <%= f.input :job_title, label: 'Job title' %>
+                <%= f.input :arrival_at, label: 'Date of arrival' %>
+                <%= f.input :slack_account, label: 'Slack account' %>
+                <%= f.input :hierarchy_rank, label: 'Hierarchy Rank', collection: HierarchyRank.all %>
+                <%= f.button :submit, class:"btn-green" %>
+            </div>
+        </div>
+        <% end %>
+    </div>
 </div>
-

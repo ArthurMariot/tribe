@@ -12,24 +12,25 @@
             <ul>
                 <a href=" <%= company_path(current_user.company) %> ">
                     <p>
-                        <li> <i class="fab fa-slack-hash"></i>Discover the company</li>
+                        <li><i class="far fa-building"></i></i>Discover the company</li>
                     </p>
                 </a>
                 <a href=" <%= edit_user_path(current_user.id) %> ">
                     <p>
-                        <li><i class="fab fa-slack-hash"></i>Personal informations</li>
+                        <li><i class="fas fa-user"></i></i>Personal informations</li>
                     </p>
                 </a>
                 <a href="<%= users_path %>">
                     <p>
-                        <li><i class="fas fa-lock"></i>Meet your colleagues</li>
+                        <li><i class="fas fa-globe-europe"></i></i>Meet your colleagues</li>
                     </p>
                 </a>
-                <a href="">
+                <a href=" <%= user_documents_path(current_user.id) %> ">
                     <p>
-                        <li><i class="fas fa-lock"></i>Documents</li>
+                        <li><i class="far fa-file"></i>Documents</li>
                     </p>
                 </a>
+                <li> <%= render 'shared/progressionbar' %></li>
             </ul>
         </div>
   </div>

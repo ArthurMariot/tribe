@@ -1,23 +1,30 @@
-<div class="container">
   <h1>Personnal Details</h1>
   <p>Fill in the employee information below, so we can create the onboarding process</p>
-
-  <div>
+  <div id="form-employee-edit">
     <%= simple_form_for @user do |f| %>
     <table>
-      <tr>
-      <%= f.input :first_name, label: 'First name' %> </tr>
+
+<h5>Tell to your colleagues what you enjoy after work</h5>
+    <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                    <%= f.input :hobby_1, label: 'Hobby 1' %>
+                    </div>
+                    <div class="col">
+                        <%= f.input :hobby_2, label: 'Hobby 2' %>
+                    </div>
+                        <div class="col">
+                        <%= f.input :hobby_3, label: 'Hobby 3' %>
+                    </div>
+                </div>
+
+      <%= f.input :description, as: :text, label: 'Tell us more about you' %>
+      <%= f.input :linkedin_url, label: 'Linkedin Url' %>
+           <tr>
       <%= f.input :avatar, label: 'Profile picture' %> </tr>
-     <tr> hobbies</tr>
-     <tr> <%= f.input :hobby_1, label: 'Hobby 1' %>
-      <%= f.input :hobby_2, label: 'Hobby 2' %>
-      <%= f.input :hobby_3, label: 'Hobby 3' %> </tr>
-      <%= f.input :location, label: 'location' %>
-      <%= f.input :linkedin_url, label: 'linkedin url' %>
-      <%= f.input :slack_account, label: 'slack account' %>
       <%= f.button :submit, class:"btn-green" %>
     <% end %>
     </table>
   </div>
-</div>
 
