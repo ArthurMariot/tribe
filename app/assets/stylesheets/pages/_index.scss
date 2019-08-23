@@ -62,3 +62,32 @@
 }
 
 
+.title-applications {
+  margin-top: 24px;
+}
+
+.logo-company-small {
+  width:70px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.ok-candidature .candidature-actions p {
+  display: flex;
+  align-items: center;
+}
+
+.ok-candidature .candidature-actions .fas {
+  margin: 0 12px;
+}
+
+.fa-spinner {
+  color: orange;
+  font-size: 24px;
+}
+
+.ok-candidature .candidature-actions .fa-times-circle {
+  color: #FD080C;
+  font-size: 24px;
+}
+
