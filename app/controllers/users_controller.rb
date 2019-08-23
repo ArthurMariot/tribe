@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def index
     @users = User.geocoded
     current_user.visit_pages1 = true
@@ -44,9 +45,6 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-
-
-  private
 
   def progress
     @user = current_user

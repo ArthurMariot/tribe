@@ -1,36 +1,37 @@
 
-    <div class="sidebar">
-        <div class="user-infos">
-          <img class="avatar-large dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= cl_image_path current_user.avatar %>" >
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
-        </div>
-          <p> <%= current_user.first_name %> <%= current_user.last_name %></p>
-        </div>
-
-        <div class="onboarding-step">
-            <ul>
-                <a href=" <%= company_path(current_user.company) %> ">
-                    <p>
-                        <li><i class="far fa-building"></i></i>Discover the company</li>
-                    </p>
-                </a>
-                <a href=" <%= edit_user_path(current_user.id) %> ">
-                    <p>
-                        <li><i class="fas fa-user"></i></i>Personal informations</li>
-                    </p>
-                </a>
-                <a href="<%= users_path %>">
-                    <p>
-                        <li><i class="fas fa-globe-europe"></i></i>Meet your colleagues</li>
-                    </p>
-                </a>
-                <a href=" <%= user_documents_path(current_user.id) %> ">
-                    <p>
-                        <li><i class="far fa-file"></i>Documents</li>
-                    </p>
-                </a>
-                <li> <%= render 'shared/progressionbar' %></li>
-            </ul>
-        </div>
+<div class="sidebar">
+  <div class="user-infos">
+    <img class="avatar-large dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= cl_image_path current_user.avatar %>" >
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
+    </div>
+    <p> <%= current_user.first_name %> <%= current_user.last_name %></p>
   </div>
+
+  <div class="onboarding-step">
+    <ul>
+      <a href=" <%= company_path(current_user.company) %> ">
+        <p>
+          <li><i class="far fa-building"></i></i>Discover the company</li>
+        </p>
+      </a>
+      <a href=" <%= edit_user_path(current_user.id) %> ">
+        <p>
+          <li><i class="fas fa-user"></i></i>Personal informations</li>
+        </p>
+      </a>
+      <a href="<%= users_path %>">
+        <p>
+          <li><i class="fas fa-globe-europe"></i></i>Meet your colleagues</li>
+        </p>
+      </a>
+      <a href=" <%= user_documents_path(current_user.id) %> ">
+        <p>
+          <li><i class="far fa-file"></i>Documents</li>
+        </p>
+      </a>
+
+      <li>  <div class="progessionbar"> <%= render 'shared/progressionbar' %> </div></li>
+    </ul>
+  </div>
+</div>
