@@ -1,6 +1,6 @@
 class HrManagers::UsersController < ApplicationController
   def index
-    @employees = User.where(onboarding_status: true)
+    @employees = User.where(onboarding_status: true).order('id DESC')
   end
 
   def new
