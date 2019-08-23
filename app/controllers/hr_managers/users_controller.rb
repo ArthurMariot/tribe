@@ -1,5 +1,4 @@
 class HrManagers::UsersController < ApplicationController
-
   def index
     @employees = User.where(onboarding_status: true)
   end
@@ -15,8 +14,8 @@ class HrManagers::UsersController < ApplicationController
     new_employee.email = params[:user][:corporate_mail]
     new_employee.password = '123456'
     new_employee.onboarding_status = true
-    new_employee.team = Team.find_by(name: params[:user][:team])
-    new_employee.hierarchy_rank = HierarchyRank.find_by(name: params[:user][:hierarchy_rank])
+    new_employee.team = Team.find(params[:user][:team])
+    new_employee.hierarchy_rank = HierarchyRank.find(params[:user][:hierarchy_rank])
     if new_employee.save!
       UserMailer.with(user: self).welcome.deliver_now
       redirect_to hr_managers_users_path
