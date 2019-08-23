@@ -57,4 +57,61 @@
   margin : auto;
 }
 
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  width: 900px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-product img {
+  height: 60%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.tire h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+
+.card-product .card-product-infos {
+  padding: 16px;
+  text-align: left;
+  h2 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    text-align: left;
+  }
+}
+
+#avatar-large-index {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-left: 20px;
+}
 
