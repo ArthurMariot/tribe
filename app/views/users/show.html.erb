@@ -1,13 +1,17 @@
-<div class="container">
-  <div class="presentation">
-    <div class="cardside">
-      <div class="card">
-        <p class="ttitle"><%= @user.job_title %> </p>
-        <center> <img height: 300, width: 400, crop: :fill, class="avatar-extra-large" src="<%= cl_image_path @user.avatar %>" alt="avatar"> </center>
-
-        <h3> <%= @user.first_name %> <%= @user.last_name %> </h3>
-        <h4> <%= @user.location %></h4>
+ <div class="container-show">
+    <div class="card-white" id="introduction">
+      <div class="line-title">
+      <h2><%= @user.first_name %> <%= @user.last_name %></h2>
+      <p>Team <%= @user.team.name %></p>
+      </div>
+      <center> <img height: 300, width: 400, crop: :fill, class="avatar-extra-large-show" src="<%= cl_image_path @user.avatar %>" alt="avatar">
+        <div class="line-img"> </center>
+          <br>
+        <p>I love travel around the world and discover new culture. </p>
+        <br>
+        <a href="<%= @user.corporate_mail %>" class="btn-green">Contact me</a>
         <div class="socialcontainer">
+          <br>
           <center>
             <table>
               <tr>
@@ -18,30 +22,21 @@
               </tr>
             </table>
           </center>
+          <h5>What I love to do? <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sunglasses_Emoji_be26cc0a-eef9-49e5-8da2-169bb417cc0b_large.png?v=1480481057" alt="emoji-smile" width="18"></h5>
+
+          <ul id="ul-left">
+            <li><p><%= @user.hobby_1 %>- Surf</p></li>
+            <li><p><%= @user.hobby_2 %>- Drink</p></li>
+            <li><p><%= @user.hobby_3 %>- Dance</p></li>
+          </ul>
+
+
         </div>
-        <br>
-        <p><button class="buttoncard">Contact</button></p>
       </div>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde est dolorem sequi commodi nesciunt repellendus possimus consequuntur cupiditate, soluta ipsum, in non? Eos qui eveniet dignissimos. Perspiciatis est cupiditate, ullam.
+
     </div>
 
-    <div class="hobbyside">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi porro atque architecto in consectetur laboriosam possimus qui deserunt, iusto maiores sint. Odio temporibus tempora voluptate autem quo expedita, distinctio repellendus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil vitae ducimus, cum, libero assumenda amet laboriosam! Accusamus veniam deleniti consequuntur, at quaerat, accusantium. Laboriosam saepe nesciunt voluptate a! Similique, suscipit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint soluta excepturi magnam dolore aspernatur officia, voluptatum sed ipsum qui odio mollitia officiis in illo voluptate quos odit expedita eveniet error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi necessitatibus ipsum exercitationem et hic vel libero, sint repudiandae, fugit reiciendis facilis possimus distinctio ut optio! Voluptatem suscipit, laboriosam eos impedit?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat </p>
-      <%= @user.email %>
-      <%= @user.phone_number %>
-      <%= @user.linkedin_url %>
-      <%= @user.slack_account %>
-      <%= @user.time_zone %>
-      <%= @user.department %>
-      <%= @user.team_id %>
-      <%= @user.hierarchy_rank_id %>
-      <%= @user.contract_status %>
-      <%= @user.contract_pdf %>
-      <%= @user.hobby_1 %>
-      <%= @user.hobby_2 %>
-      <%= @user.hobby_3 %>
-      <%= @user.company_id %>
-      <%= @user.arrival_at %>
-    </div>
-  </div>
-</div>
+<br><br><br><br><br><br><br>
+
+
+
