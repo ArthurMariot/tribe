@@ -1,7 +1,11 @@
 
 <div class="sidebar">
   <div class="user-infos">
+    <% if current_user.avatar.url.nil? %>
+    <img class="avatar-large dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://fpcambler.org/wp-content/themes/church-emphasis/assets/dist/img/default-avatar.jpg" >
+    <% else %>
     <img class="avatar-large dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= cl_image_path current_user.avatar %>" >
+    <% end %>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
       <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
     </div>
