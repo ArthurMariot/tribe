@@ -7,7 +7,7 @@
       <center> <img height: 300, width: 400, crop: :fill, class="avatar-extra-large-show" src="<%= cl_image_path @user.avatar %>" alt="avatar">
         <div class="line-img"> </center>
           <br>
-        <p>I love travel around the world and discover new culture. </p>
+        <p> <%= @user.description %> </p>
         <br>
         <a href="<%= @user.corporate_mail %>" class="btn-green">Contact me</a>
         <div class="socialcontainer">
@@ -17,7 +17,7 @@
               <tr>
                 <td><h4 href="#"> <i class="fa fa-dribbble"></i> </h4></td>
                 <td><h4 href="#"> <i class="fa fa-twitter"></i> </h4></td>
-                <td><h4 href="#"><i class="fa fa-linkedin"></i> </h4></td>
+                <td><h4 href="<%= @user.linkedin_url %>"><i class="fa fa-linkedin"></i> </h4></td>
                 <td><h4 href="#"> <i class="fa fa-facebook"></i> </h4></td>
               </tr>
             </table>
@@ -35,7 +35,9 @@
       </div>
 
     </div>
-
+    <center>
+<a class="btn-green" href="<%= users_path %>"> Back to the map </a>
+      </center>
 <br><br><br><br><br><br><br>
 
 

@@ -35,6 +35,7 @@
                 <%= f.input :arrival_at, label: 'Date of arrival' %>
                 <%= f.input :slack_account, label: 'Slack account' %>
                 <%= f.input :hierarchy_rank, label: 'Hierarchy Rank', collection: HierarchyRank.all %>
+                <%= f.input :contract_pdf, label: false %>
                 <%= f.button :submit, class:"btn-green" %>
             </div>
         </div>
