@@ -3,9 +3,9 @@
   <p>Fill in the company information below accurately, so we can create the presentation of the company</p>
   <div>
     <%= simple_form_for [:hr_managers, @company] do |f| %>
-      <%= f.input :short_description, label: 'Description' %>
+      <%= f.input :short_description, label: 'Description', as: :text %>
       <%= f.input :mission, label: 'Mission' %>
-      <%= f.input :history, label: 'History' %>
+      <%= f.input :history, label: 'History' , as: :text %>
       <%= f.input :photo_header, label: 'Main picture' %>
       <%= f.input :photo_description, label: 'Team picture' %>
       <%= f.input :founded_in, label: 'Date of creation' %>
