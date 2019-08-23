@@ -69,6 +69,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:location, :linkedin_url, :hobby_1, :hobby_2, :hobby_3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar, :upload_contrat, :upload_internal_rules)
+    params.require(:user).permit(:location, :linkedin_url, :hobby_1, :hobby_2, :hobby_3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar, :upload_contrat, :upload_internal_rules, :description)
   end
 end
