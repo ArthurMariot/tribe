@@ -14,4 +14,8 @@ class PagesController < ApplicationController
    current_user.visit_pages2 = true
    current_user.save
  end
+
+ def progress
+   current_user.progress
+ end
 end
