@@ -21,8 +21,6 @@ class UsersController < ApplicationController
       }
     end
 
-    @geojson = build_geojson
-
   end
 
   def show
