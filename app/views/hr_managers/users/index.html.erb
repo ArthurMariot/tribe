@@ -1,37 +1,24 @@
-<h1>Manage your onboarding</h1>
 
-<div class="container">
 
-  <div class="onboarding-cards">
   <% @employees.each do |employee| %>
+<div class="card-product">
 
-    <div class="onboarding-card">
-      <div class="onboarded-employee-infos">
-          <div class="onboarded-employee-infos-personal">
-            <% if employee.avatar.url.nil? %>
-              <img class="avatar-large" src="https://fpcambler.org/wp-content/themes/church-emphasis/assets/dist/img/default-avatar.jpg" >
+  <% if employee.avatar.url.nil? %>
+              <img id="avatar-large-index" src="https://fpcambler.org/wp-content/themes/church-emphasis/assets/dist/img/default-avatar.jpg" >
             <% else %>
-              <img class="avatar-large" src="<%= cl_image_path employee.avatar %>" >
-            <% end %>
-            <h2><%= employee.first_name %> <strong><%= employee.last_name %></strong></h2>
-          </div>
-          <div>
-            <p> <%= employee.job_title %> - Team <%= employee.team.name %> </p>
-            <p>First day:<%= employee.arrival_at %></p>
-          </div>
-      </div>
-      <div class="onboarding-status-infos">
-        <div class="progression-bar">
-          <img src="https://banner2.kisspng.com/20180330/ele/kisspng-progress-bar-computer-icons-loading-5abe959ace44f9.4184702615224395788449.jpg" class="progression-bar">
-        </div>
-        <div class="progression-bar-caption">
-          <span>onboarding</span>
-          <span> % progression</span>
-        </div>
-      </div>
-    </div>
-  <% end %>
-  </div>
+              <img id="avatar-large-index" src="<%= cl_image_path employee.avatar %>" >
+           <% end %>
+
+  <div class="card-product-infos">
+    <h2><%= employee.first_name %> <strong><%= employee.last_name %></strong></h2>
+    <p><%= employee.team.name %></p>
+
+    <small> <p>Location:<%= employee.location%></p></small>
+
+
+   </div>
 </div>
+<br>
+<% end %>
 
 
