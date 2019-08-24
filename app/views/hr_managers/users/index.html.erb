@@ -1,24 +1,39 @@
-
 <h2>Manage your onboarding</h2>
-
-
-  <% @employees.each do |employee| %>
+<% @employees.each do |employee| %>
 <div class="card-product">
+    <div class="card-left">
+        <% if employee.avatar.url.nil? %>
+        <img id="avatar-large-index" src="https://fpcambler.org/wp-content/themes/church-emphasis/assets/dist/img/default-avatar.jpg">
+        <% else %>
+        <img id="avatar-large-index" src="<%= cl_image_path employee.avatar %>">
+        <% end %>
+        <div class="card-product-infos">
+            <h4>
+                <%= employee.first_name %>
+                <%= employee.last_name %>
+            </h4>
+            <p><i class="fas fa-user-friends"></i> Job: <%= employee.job_title %>
+                (Team <%= employee.team.name %>)
+            </p>
+            <small>
+                <p><i class="fas fa-map-marker-alt"></i> Location:
+                    <%= employee.location%>
+                </p>
+            </small>
+              <small>
+                <p><i class="far fa-calendar-alt"></i> Date of arrival:
+                    <%= employee.arrival_at%>
+                </p>
+            </small>
+        </div>
+         <button class="btn-contact">Contact</button>
 
-  <% if employee.avatar.url.nil? %>
-              <img id="avatar-large-index" src="https://fpcambler.org/wp-content/themes/church-emphasis/assets/dist/img/default-avatar.jpg" >
-            <% else %>
-              <img id="avatar-large-index" src="<%= cl_image_path employee.avatar %>" >
-           <% end %>
+    </div>
 
-  <div class="card-product-infos">
-    <h2><%= employee.first_name %> <strong><%= employee.last_name %></strong></h2>
-    <p><%= employee.team.name %></p>
-
-    <small> <p>Location:<%= employee.location%></p></small>
-
-
-   </div>
+    <div class="card-right">
+      <small><h6>Onboarding progress %</h6></small>
+      <div class="progessionbar"> <%= render 'shared/progressionbar' %> </div>
+    </div>
 </div>
 <br>
 <% end %>
