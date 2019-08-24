@@ -9,11 +9,20 @@ class User < ApplicationRecord
   belongs_to :hierarchy_rank
   geocoded_by :location
   after_validation :geocode
+  devise :omniauthable, omniauth_providers: [:slack]
+
+  def self.from_slack(auth)
+    where(slack_id: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.username = auth.info.name
+      user.password = Devise.friendly_token[0, 20]
+    end
+  end
 
   pg_search_scope :search_by_team,
   against: [:team],
   using: {
-      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+      tsearch: { prefix: true }
     }
     mount_uploader :avatar, AvatarUploader
     mount_uploader :contract_pdf, FilespdfUploader

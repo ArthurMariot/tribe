@@ -20,6 +20,8 @@ gem 'webpacker'
 gem 'geocoder'
 gem 'pg_search'
 gem "slack-notifier"
+gem "omniauth"
+gem 'omniauth-slack'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

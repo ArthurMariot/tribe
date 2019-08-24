@@ -75,7 +75,9 @@
                        </div>
 
                     <h6>Contract (PDF)</h6>
-                    <%= f.input :contract_pdf, label: false %>
+                    <div class="upload">
+                    <%= f.input :contract_pdf, input_html: { class: 'd-none', id: 'photo-input'}, label_html: { class: 'upload-fill'}, label: '📁 Upload a fill' %>
+                    </div>
                 </div>
             </div>
         </div>
