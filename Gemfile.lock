@@ -185,6 +185,7 @@ GEM
     simple_form (4.1.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
+    slack-notifier (2.3.2)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -245,6 +246,7 @@ DEPENDENCIES
   redis
   sassc-rails
   simple_form
+  slack-notifier
   spring
   spring-watcher-listen (~> 2.0.0)
   uglifier
