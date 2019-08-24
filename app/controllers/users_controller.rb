@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  SLACK_NOTIFIER = Slack::Notifier.new "https://hooks.slack.com/services/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" do
+    defaults channel: "#general"
+  end
 
   def index
     @users = User.geocoded
@@ -12,7 +15,6 @@ class UsersController < ApplicationController
     else
       @users_by_team = User.all.geocoded
     end
-
     @markers = @users_by_team.map do |user|
       {
         lat: user.latitude,
@@ -34,6 +36,17 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @current_user.update(user_params)
+      SLACK_NOTIFIER.post text:
+      "<!here> Hi all 🖐
+
+    Super excited to let you know that it's the first day of *#{@user.first_name}* who is joining us as a *#{@user.job_title}*.
+    #{@user.first_name} lives at #{@user.location} 🌍
+
+    💙 Here are these hobbies:
+    - #{@user.hobby_1}
+    - #{@user.hobby_2}
+    - #{@user.hobby_3}"
+
       if params['user']['upload_contrat'] || params['user']['upload_internal_rules']
         redirect_to user_documents_path(@user)
       else

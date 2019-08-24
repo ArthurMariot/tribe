@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'geocoder'
 gem 'pg_search'
+gem "slack-notifier"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
