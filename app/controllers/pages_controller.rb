@@ -19,3 +19,4 @@ class PagesController < ApplicationController
    current_user.progress
  end
 end
+

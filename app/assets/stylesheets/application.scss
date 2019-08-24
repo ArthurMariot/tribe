@@ -15,7 +15,7 @@
 @import "pages/welcome";
 
 body {
-  background: #ffff;
+  background: #f2f3f6;
 }
 
 ul {
@@ -35,7 +35,7 @@ h1 {
 h2 {
   font-size:24px;
   line-height:52px;
-  font-weight:700;
+  font-weight:800;
   text-align:center;
   color: $blue;
 }
@@ -121,6 +121,37 @@ p, a, span{
   text-align: left;
 }
 
+.teams {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0px;
+  margin-top: 0px;
+}
 
+.team-name {
+  flex: 0 0 30%;
+  background-color: #b1deff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  opacity: 0.8
+}
 
+.team-name:hover {
+  opacity: 1;
+  cursor: pointer;
+}
 
+.active {
+  background-color: $green;
+  color: white;
+  opacity: 1;
+
+}
+
+#form-employee label {
+  margin: 0;
+}

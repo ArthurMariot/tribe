@@ -24,7 +24,6 @@ const addMarkersToMap = (map, markers) => {
   element.style.height = '28px';
   element.className = 'rounded-circle';
 
-
     new mapboxgl.Marker(element)
       .setLngLat([ marker.lng, marker.lat ])
       .setPopup(popup)

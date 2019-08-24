@@ -1,4 +1,5 @@
 <div class="container">
+ <h2>Hey <%= current_user.first_name %> <%= current_user.last_name.upcase %>, Welcome to Tribe!</h2>
   <div class="features">
 <a href="<%= edit_hr_managers_company_path(current_user.company)%>">
     <div class="feature-card">

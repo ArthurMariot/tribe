@@ -14,8 +14,8 @@ class HrManagers::UsersController < ApplicationController
     new_employee.email = params[:user][:corporate_mail]
     new_employee.password = '123456'
     new_employee.onboarding_status = true
-    new_employee.team = Team.find(params[:user][:team])
-    new_employee.hierarchy_rank = HierarchyRank.find(params[:user][:hierarchy_rank])
+    new_employee.team = Team.find(params[:user][:team][1])
+    new_employee.hierarchy_rank = HierarchyRank.find(params[:user][:hierarchy_rank][1])
     if new_employee.save!
       UserMailer.with(user: self).welcome.deliver_now
       redirect_to hr_managers_users_path
@@ -27,6 +27,6 @@ class HrManagers::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:location, :linkedin_url, :hobby1, :hobby2, :hobby3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar, :description)
+    params.require(:user).permit(:team, :location, :linkedin_url, :hobby1, :hobby2, :hobby3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar, :description)
   end
 end
