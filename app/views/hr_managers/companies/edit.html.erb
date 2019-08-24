@@ -1,19 +1,31 @@
 <div class="container">
   <h2>Company details</h2>
   <p>Fill in the company information below accurately, so we can create the presentation of the company</p>
-  <div>
+  <div class="form-style">
     <%= simple_form_for [:hr_managers, @company] do |f| %>
-      <%= f.input :short_description, label: 'Description', as: :text %>
+      <%= f.input :short_description, label: 'Description', :as => :text, :input_html => { 'rows' => 11} %>
       <%= f.input :mission, label: 'Mission' %>
-      <%= f.input :history, label: 'History' , as: :text %>
+      <%= f.input :history, label: 'History', :as => :text, :input_html => { 'rows' => 10} %>
       <%= f.input :photo_header, label: 'Main picture' %>
       <%= f.input :photo_description, label: 'Team picture' %>
       <%= f.input :founded_in, label: 'Date of creation' %>
+      <div class="row">
+        <div class="col">
       <%= f.input :linkedin_url, label: 'Linkedin' %>
+        </div>
+        <div class="col">
       <%= f.input :facebook_url, label: 'Facebook' %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
       <%= f.input :github_url, label: 'Github' %>
+        </div>
+        <div class="col">
       <%= f.input :twitter_url, label: 'Twitter' %>
-      <%= f.input :founded_in, label: 'Date of creation' %>
+        </div>
+      </div>
       <%= f.button :submit, class:"btn-green" %>
     <% end %>
   </div>
