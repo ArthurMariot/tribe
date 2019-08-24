@@ -1,5 +1,25 @@
 // Specific CSS for your home-page
 
 .content {
-  margin-top: 130px;
+  margin-top: 60px;
+}
+
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  background-color: $blue;
+}
+
+.banner-content {
+
+}
+.banner-img {
+
+}
+
+.banner-img img {
+  width: 490px;
 }
