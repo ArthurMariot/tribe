@@ -13,16 +13,30 @@
   background-color: $blue;
   padding-top: 20px;
   height: 100vh;
+  margin-top: 30px;
 }
 
 .banner-content h1 {
   font-size: 52px;
   margin-bottom: 15px;
 }
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .btn-green {
+    width: 166px;
+  }
+  span {
+    color: $yellow;
+  }
+}
+
 .banner-img {
 
 }
 
 .banner-img img {
-  width: 530px;
+  width: 475px;
 }
