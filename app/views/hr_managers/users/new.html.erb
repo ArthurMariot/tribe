@@ -62,6 +62,8 @@
                     <%= f.input :job_title, label: false, placeholder: 'Job title' %>
                     <%= f.input :arrival_at, as: :string, required: false, input_html: {class: "datepicker"}, label: false, placeholder: 'Date of arrival' %>
                     <%= f.input :slack_account, label: false, placeholder: 'Slack account' %>
+                    <h6 class= "mb-2">Assign a buddy</h6>
+                     <%= f.input :buddy, label: false, placeholder: 'Slack account', collection: User.all %>
 
                     <h6>Hierarchy rank</h6>
                       <div class="teams">

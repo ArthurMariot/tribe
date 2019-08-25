@@ -53,7 +53,13 @@
   background-color: #1fe3cf;
   color: #263858;
   margin-top: 50px;
-
+    p {
+      margin-top: -5px;
+      color: #263858;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
 }
 
  input {

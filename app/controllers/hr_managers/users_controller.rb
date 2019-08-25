@@ -8,6 +8,7 @@ class HrManagers::UsersController < ApplicationController
   end
 
   def create
+    raise
     new_employee = User.new
     new_employee = User.new(user_params)
     new_employee.company = current_user.company
