@@ -1,18 +1,16 @@
-<!-- <div class="container"> -->
-        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= @company.photo_header %>);">
-            <h1>
-                <%= @company.name %>
-            </h1>
+<h1 id="h1-company">About us</h1>
+        <div class="banner-company" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= @company.photo_header %>);">
         </div>
         <div class="description">
             <div class="description-infos">
-                <h2>Description</h2>
+               <h2 id="mission"><%= @company.mission %></h2>
                 <p>
                     <%= @company.short_description %>
                 </p>
-            </div>
-            <img src=" <%= @company.photo_description %> " />
-        </div>
+
+          <h2><%= @company.name %>'s Team</h2>
+<img src="<%= @company.photo_description %>" alt="", class="center">
+
         <h2>Our values</h2>
         <div class="values">
             <% @company.values.each do |value| %>
@@ -31,10 +29,12 @@
         <div class="social-medias">
             <h2>Social medias</h2>
             <div class="footer-links">
+
                 <a href="<%= @company.github_url %>" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="<%= @company.facebook_url %>" target="_blank"><i class="fab fa-facebook"></i></a>
                 <a href="<%= @company.twitter_url %>" target="_blank"><i class="fab fa-twitter"></i></a>
                 <a href="<%= @company.linkedin_url %>" target="_blank"><i class="fab fa-linkedin"></i></a>
+
             </div>
         </div>
         <div class="button-next">
@@ -43,5 +43,3 @@
             </a>
         </div>
     </div>
-<!-- </div> -->
-
