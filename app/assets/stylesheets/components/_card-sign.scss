@@ -1,0 +1,58 @@
+.sign-document {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 24px auto;
+}
+
+.sign-document .document {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  min-width: 250px;
+  p {
+    text-align: center;
+  }
+}
+
+.sign-document .sign {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  min-width: 200px;
+  .upload-fill {
+    margin-top: 0;
+    background-color: $green;
+    border-radius: 8px;
+    color: white;
+  }
+}
+
+  .transition .fa-circle {
+    font-size: 8px;
+  }
+
+
+.sign-document .transition {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.document .fa-file-pdf {
+  font-size: 100px;
+  color: $blue;
+}
+
+
+.document p {
+  text-align: left;
+}
