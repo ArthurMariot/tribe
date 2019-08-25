@@ -6,11 +6,11 @@
 
 .mapboxgl-popup {
   max-width: 200px;
+  border-radius: 12px;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
     p {
       font-size: 12px;
     }
@@ -19,6 +19,12 @@
       font-size: 14px;
       font-weight: bold;
       color: $blue
+    }
+
+    h5 {
+      font-size: 12px;
+      font-weight: bold;
+      color: $green;
     }
 }
 
@@ -34,11 +40,12 @@
    z-index: 1;
 }
 
-.search-form-control .btn-green {
+.search-form-control .btn-green-search {
   position: absolute;
-  top: 8px;
+  top: 7px;
   bottom: 8px;
   right: 8px;
+  margin-top: 0px;
   // color: white;
   // padding: 8px 24px;
   // border-radius: 50px;
@@ -62,3 +69,37 @@
   border: 1px solid blue;
   outline: none !important;
 }
+
+
+.card-map{
+  width: 200px; /* ⬅ Size - Small (width: 200px), Medium (width: 225px), Large (width: 250px) */
+  overflow: hidden;
+  background-color: #FFFFFF;
+
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-align: center;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+}
+
+  .card-map:first-of-type{
+    margin-right: 25px;
+  }
+
+  .card-map:hover{
+    margin-top: -10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+
+.no-margin {
+  margin: 0 0 0 10px;
+  text-align: center;
+}
+
+
+
+
+
+

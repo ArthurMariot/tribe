@@ -43,13 +43,21 @@
 
 
 #form-employee-edit {
-  width: 50%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 30px 70px;
 
     label {
       color: $blue;
+      padding: 0px;
+      margin: 0px;
+      font-weight: 600;
+      margin-top: 25px;
+      margin-bottom: 10px;
     }
 
     .form-control {
@@ -63,10 +71,20 @@
       margin-top: 20px;
     }
 
+    h6 {
+      color: $blue;
+      padding: 0px;
+      margin: 0px;
+      font-weight: 600;
+      margin-top: 25px;
+    }
+
     .btn-green {
     text-align: center;
     display: block;
     margin: 0 auto;
+    padding: 25px 30px;
+    margin-top: 25px;
     }
 }
 
