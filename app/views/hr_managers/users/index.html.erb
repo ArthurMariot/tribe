@@ -8,6 +8,7 @@
         <th class="titles"><i class="fas fa-align-left"></i>   POSITION</th>
         <th class="titles"><i class="fas fa-map-pin"></i>   LOCATION</th>
         <th class="titles"><i class="far fa-calendar-alt"></i>   START DATE</th>
+        <th class="titles"><i class="fas fa-user"></i>   BUDDY</th>
         <th class="titles"><i class="fas fa-tasks"></i>   ONBOARDING PROGRESS</th>
       </tr>
 
@@ -26,6 +27,10 @@
        <th><%= employee.job_title %></th>
        <th><%= employee.location%></th>
        <th><%= employee.arrival_at%></th>
+       <th> <div class="employee">
+              <img id="avatar-small-index" src="<%= cl_image_path employee.avatar %>">
+              Jacques Uguen</th>
+          </div></th>
        <th><div class="progessionbar"> <%= render 'shared/progressionbar' %> </div></th>
      </tr>
    <% end %>
