@@ -11,15 +11,18 @@
   justify-items: center;
   justify-content: space-around;
   background-color: $blue;
+  padding-top: 20px;
+  height: 100vh;
 }
 
-.banner-content {
-
+.banner-content h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
 }
 .banner-img {
 
 }
 
 .banner-img img {
-  width: 490px;
+  width: 530px;
 }
