@@ -1,4 +1,43 @@
-.onboarding-cards {
-  display: flex;
-  flex-direction: column-reverse;
+.hr-dashboard {
+  margin: 0 100px 0 200px;
+}
+
+.current-onboardings {
+  background-color: white;
+  border-radius: 12px;
+  table, th, td {
+  }
+  th {
+  text-align: left;
+  }
+  table {
+  border-spacing: 5px;
+  }
+  th, td {
+  padding: 12px;
+  }
+  th {
+    color: #333333;
+    font-weight: 200;
+  }
+  .titles {
+    color: #bfbdbd;
+    font-size: 13px;
+    border-bottom: 0.2px solid #e5e5e5;
+  }
+}
+
+
+
+#avatar-small-index {
+  border-radius: 50%;
+  width: 20px;
+}
+
+th .employee {
+  color: #333333;
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 4px 12px 4px 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
