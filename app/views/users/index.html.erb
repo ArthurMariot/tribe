@@ -7,7 +7,7 @@
   </div>
 
   <div class="info-number">
-    <h2><%= User.all.select(:location).uniq.count %></h2>
+    <h2><%= User.all.select(:location).uniq{|d| d[:location]}.count %></h2>
     <h3>cities</h3>
   </div>
 
