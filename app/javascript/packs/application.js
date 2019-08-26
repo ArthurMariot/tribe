@@ -3,6 +3,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import "../plugins/flatpickr";
+import { initSelect2 } from "../plugins/init_select2";
 import "../plugins/init_autocomplete"
 import "../plugins/option_picker"
 import Swal from 'sweetalert2';
@@ -24,5 +25,6 @@ if (new_employee) {
  });
 }
 
-
 initMapbox();
+initSelect2();
+
