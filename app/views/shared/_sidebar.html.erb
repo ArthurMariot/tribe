@@ -12,6 +12,7 @@
     <p> <%= current_user.first_name %> <%= current_user.last_name %></p>
   </div>
 
+
   <div class="onboarding-step">
     <ul>
       <a href=" <%= company_path(current_user.company) %> ">
@@ -39,7 +40,14 @@
           <li><i class="far fa-file"></i>Documents</li>
         </p>
       </a>
-      <li>  <div class="progessionbar"> <%= render 'shared/progressionbar' %> </div></li>
     </ul>
   </div>
+
+  <div class="onboarding-progress">
+    <p>Onboarding progress (<%= current_user.progress %>%)</p>
+    <div class="progessionbar">
+    <%= render 'shared/progressionbar' %>
+    </div>
+  </div>
+
 </div>

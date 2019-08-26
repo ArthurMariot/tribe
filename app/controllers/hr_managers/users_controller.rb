@@ -8,7 +8,6 @@ class HrManagers::UsersController < ApplicationController
   end
 
   def create
-    raise
     new_employee = User.new
     new_employee = User.new(user_params)
     new_employee.company = current_user.company
@@ -17,10 +16,10 @@ class HrManagers::UsersController < ApplicationController
     new_employee.onboarding_status = true
     new_employee.team = Team.find(params[:user][:team][1])
     new_employee.hierarchy_rank = HierarchyRank.find(params[:user][:hierarchy_rank][1])
-    raise
+
     if new_employee.save!
       UserMailer.with(user: self).welcome.deliver_now
-      redirect_to hr_managers_users_path
+      # redirect_to hr_managers_users_path
     else
       render :new
     end
@@ -29,6 +28,6 @@ class HrManagers::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:team, :location, :linkedin_url, :hobby1, :hobby2, :hobby3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar, :description)
+    params.require(:user).permit(:buddy, :team, :location, :linkedin_url, :hobby1, :hobby2, :hobby3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar, :description)
   end
 end

@@ -1,7 +1,6 @@
 #map {
   border-radius: 8px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-right: 15px;
 }
 
 .mapboxgl-popup {
@@ -103,10 +102,15 @@
   text-align: center;
 }
 
+.map-plus-infos {
+  display: flex;
+}
+
 .general-infos {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 30px;
+  flex-direction: column;
+  padding: 20px;
   background-color: white;
   border-radius: 8px;
 }
