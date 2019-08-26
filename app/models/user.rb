@@ -45,6 +45,11 @@ class User < ApplicationRecord
     return @score
   end
 
+  def buddy_object
+    @buddy = User.find((self.buddy).to_i)
+    return @buddy
+  end
+  
   def self.all_full_name
     user_first_names = []
     User.all.each do |user|
