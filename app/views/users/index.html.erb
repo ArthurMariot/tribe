@@ -1,25 +1,4 @@
 
-<div class="general-infos">
-
-  <div class="info-number">
-    <h2><%= User.all.count %></h2>
-    <h3>teammates</h3>
-  </div>
-
-  <div class="info-number">
-    <h2><%= User.all.select(:location).uniq{|d| d[:location]}.count %></h2>
-    <h3>cities</h3>
-  </div>
-
-  <div class="info-number">
-    <h2><%= Team.all.count %></h2>
-    <h3>teams</h3>
-  </div>
-
-</div>
-
-
-
 <form novalidate="novalidate" class="simple_form search" id="search-map" action="#" accept-charset="UTF-8" method="get">
     <input name="utf8" type="hidden" value="&#x2713;" />
     <div class="search-form-control form-group">
@@ -29,7 +8,29 @@
     </div>
 </form>
 
-  <div id="map" style="width: 80%;
-  height: 550px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
+
+<div class="map-plus-infos">
+
+  <div id="map" style="width: 95%;
+    height: 550px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
+  <div class="general-infos">
+    <div class="info-number">
+      <h2><%= User.all.count %></h2>
+      <h3>teammates</h3>
+    </div>
+
+    <div class="info-number">
+      <h2><%= User.all.select(:location).uniq{|d| d[:location]}.count %></h2>
+      <h3>cities</h3>
+    </div>
+
+    <div class="info-number">
+      <h2><%= Team.all.count %></h2>
+      <h3>teams</h3>
+    </div>
+  </div>
+
+</div>
