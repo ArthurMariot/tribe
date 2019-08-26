@@ -2,16 +2,15 @@
 <div class="hr-dashboard">
 
  <table class="current-onboardings">
-      <tr>
-        <th class="titles"><i class="fas fa-user"></i>   EMPLOYEE</th>
-        <th class="titles"><i class="fas fa-users"></i>   TEAM</th>
-        <th class="titles"><i class="fas fa-align-left"></i>   POSITION</th>
-        <th class="titles"><i class="fas fa-map-pin"></i>   LOCATION</th>
-        <th class="titles"><i class="far fa-calendar-alt"></i>   START DATE</th>
-        <th class="titles"><i class="fas fa-user"></i>   BUDDY</th>
-        <th class="titles"><i class="fas fa-tasks"></i>   ONBOARDING PROGRESS</th>
-      </tr>
-
+  <tr>
+    <th class="titles"><i class="fas fa-user"></i>   EMPLOYEE</th>
+    <th class="titles"><i class="fas fa-users"></i>   TEAM</th>
+    <th class="titles"><i class="fas fa-align-left"></i>   POSITION</th>
+    <th class="titles"><i class="fas fa-map-pin"></i>   LOCATION</th>
+    <th class="titles"><i class="far fa-calendar-alt"></i>   START DATE</th>
+    <th class="titles"><i class="fas fa-user"></i>   BUDDY</th>
+    <th class="titles"><i class="fas fa-tasks"></i>   ONBOARDING PROGRESS</th>
+  </tr>
    <% @employees.each do |employee| %>
      <tr>
        <th>
@@ -31,9 +30,14 @@
                 <img id="avatar-small-index" src="<%= cl_image_path employee.buddy_object.avatar %>">
                <%= employee.buddy_object.first_name %> <%= employee.buddy_object.last_name %></th>
           </div></th>
-       <th><div class="progessionbar"> <%= render 'shared/progressionbar' %> </div></th>
+       <th>
+         <div class="progessionbar">     
+           <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" style="width: <%= employee.progress %>%" aria-valuenow="<%= employee.progress %>" aria-valuemin="0" aria-valuemax="100">
+             </div>
+      </div></div>
+      </th>
      </tr>
    <% end %>
  </table>
-
- </div>
+</div>
