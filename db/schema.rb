@@ -118,7 +118,7 @@ ActiveRecord::Schema.define(version: 2019_08_25_101343) do
     t.string "upload_internal_rules"
     t.string "description"
     t.string "slack_id"
-    t.string "buddy"
+    t.integer "buddy"
     t.index ["company_id"], name: "index_users_on_company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["hierarchy_rank_id"], name: "index_users_on_hierarchy_rank_id"

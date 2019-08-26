@@ -18,5 +18,8 @@ class PagesController < ApplicationController
  def progress
    current_user.progress
  end
+
+ def buddy
+ end
 end
 
