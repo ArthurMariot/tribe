@@ -1,0 +1,42 @@
+.buddy-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  background-color: white;
+  border-radius: 12px;
+  width: 38%;
+  padding: 40px;
+  margin-top: 60px;
+    .avatar-buddy {
+      margin-left: auto;
+      margin-right: auto;
+    }
+}
+
+.buddy-infos {
+  text-align: center;
+
+    p {
+      font-size: 16px;
+    }
+
+    h4 {
+      font-size: 22px;
+      font-weight: bold;
+      color: $green;
+    }
+  }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  .btn-blue {
+
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}

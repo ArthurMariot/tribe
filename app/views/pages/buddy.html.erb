@@ -1,85 +1,33 @@
-  <div class="sign-document">
-<div>
-  <div class="container-show">
-    <div class="card-white" id="introduction">
-      <div class="line-title">
-      <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
-      <p>Team <%= current_user.team.name %></p>
-      </div>
-      <center> <img height: 300, width: 400, crop: :fill, class="avatar-extra-large-show" src="<%= cl_image_path current_user.avatar %>" alt="avatar">
-        <div class="line-img"> </center>
-          <br>
-        <p> <%= current_user.description %> </p>
-        <br>
-        <a href="<%= current_user.corporate_mail %>" class="btn-green">Contact me</a>
-        <div class="socialcontainer">
-          <br>
-          <center>
-            <table>
-              <tr>
-                <td><h4 href="#"> <i class="fa fa-dribbble"></i> </h4></td>
-                <td><h4 href="#"> <i class="fa fa-twitter"></i> </h4></td>
-                <td><h4 href="<%= current_user.linkedin_url %>"><i class="fa fa-linkedin"></i> </h4></td>
-                <td><h4 href="#"> <i class="fa fa-facebook"></i> </h4></td>
-              </tr>
-            </table>
-          </center>
-          <h5>What I love to do? <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sunglasses_Emoji_be26cc0a-eef9-49e5-8da2-169bb417cc0b_large.png?v=1480481057" alt="emoji-smile" width="18"></h5>
-
-          <ul id="ul-left">
-            <li><p>- <%= current_user.hobby_1 %></p></li>
-            <li><p>- <%= current_user.hobby_2 %></p></li>
-            <li><p>- <%= current_user.hobby_3 %></p></li>
-          </ul>
-
-
-        </div>
-      </div>
-
+<h1>Meet your buddy!</h1>
+<p>
+    <%= current_user.buddy_object.first_name %> will take care of you during the first onboarding week.</p>
+<div class="buddy-card">
+    <div class="avatar-buddy">
+        <img class="avatar-extra-extra-large" src="<%= cl_image_path current_user.buddy_object.avatar %>">
     </div>
-    <center>
-<a class="btn-green" href="<%= users_path %>"> Back to the map </a>
-      </center>
-<br><br><br><br><br><br><br></div>
-<div> <div class="container-show">
-    <div class="card-white" id="introduction">
-      <div class="line-title">
-      <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
-      <p>Team <%= current_user.team.name %></p>
-      </div>
-      <center> <img height: 300, width: 400, crop: :fill, class="avatar-extra-large-show" src="<%= cl_image_path current_user.avatar %>" alt="avatar">
-        <div class="line-img"> </center>
-          <br>
-        <p> <%= current_user.description %> </p>
-        <br>
-        <a href="<%= current_user.corporate_mail %>" class="btn-green">Contact me</a>
-        <div class="socialcontainer">
-          <br>
-          <center>
-            <table>
-              <tr>
-                <td><h4 href="#"> <i class="fa fa-dribbble"></i> </h4></td>
-                <td><h4 href="#"> <i class="fa fa-twitter"></i> </h4></td>
-                <td><h4 href="<%= current_user.linkedin_url %>"><i class="fa fa-linkedin"></i> </h4></td>
-                <td><h4 href="#"> <i class="fa fa-facebook"></i> </h4></td>
-              </tr>
-            </table>
-          </center>
-          <h5>What I love to do? <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sunglasses_Emoji_be26cc0a-eef9-49e5-8da2-169bb417cc0b_large.png?v=1480481057" alt="emoji-smile" width="18"></h5>
-
-          <ul id="ul-left">
-            <li><p>- <%= current_user.hobby_1 %></p></li>
-            <li><p>- <%= current_user.hobby_2 %></p></li>
-            <li><p>- <%= current_user.hobby_3 %></p></li>
-          </ul>
-
-
-        </div>
-      </div>
-
+    <div class="buddy-infos">
+        <h4>
+            <%= current_user.buddy_object.first_name %>
+            <%= current_user.buddy_object.last_name %>
+        </h4>
+        <p>
+            <%= current_user.buddy_object.job_title %>
+        </p>
+        <p> <i class="fas fa-map-marker-alt"></i>
+            <%= current_user.buddy_object.location %>
+        </p>
     </div>
-    <center>
-<a class="btn-green" href="<%= users_path %>"> Back to the map </a>
-      </center>
-<br><br><br><br><br><br><br></div>
+    <div class="buttons">
+        <div>
+            <a href="<%= user_path(current_user.buddy_object.id) %>" , class="btn-blue"><i class="far fa-user"></i> Profile</a>
+        </div>
+        <div>
+            <a href="mailto:<%= current_user.buddy_object.email %>" , class="btn-blue"><i class="far fa-comment-alt"></i> Chat </a>
+        </div>
+    </div>
+</div>
+<div class="button-next">
+    <a href="<%= user_documents_path(current_user.id) %>">
+        <i class="fas fa-arrow-right"></i>
+    </a>
 </div>
