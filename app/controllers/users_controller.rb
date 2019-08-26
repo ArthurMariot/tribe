@@ -74,7 +74,7 @@ class UsersController < ApplicationController
 
 
   def user_params
-    params.require(:user).permit(:upload_contrat, :upload_internal_rules, :location, :linkedin_url, :hobby_1, :hobby_2, :hobby_3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :team, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar, :upload_contrat, :upload_internal_rules, :description)
+    params.require(:user).permit(:buddy, :upload_contrat, :upload_internal_rules, :location, :linkedin_url, :hobby_1, :hobby_2, :hobby_3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :team, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar, :upload_contrat, :upload_internal_rules, :description)
   end
 
   def message
