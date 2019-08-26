@@ -1,51 +1,31 @@
 <h1>Documents to sign</h1>
 <p>Take time to read & sign the following documents</p>
 
-  <div class="sign-document">
+<div class="sign-document">
 
-    <div class="document">
-      <p>Download contract</p>
-      <a href="<%= current_user.contract_pdf %>" download, target="-blank">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-    </div>
-
-    <div class="transition">
-      <p>. . . . . . . . . . . . . . . . .</p>
-    </div>
-
-    <div class="sign">
-      <p>Upload signed file</p>
-      <%= simple_form_for current_user, method: :patch do |f| %>
-      <div class="upload">
-        <%= f.input :contract_pdf, input_html: { class: 'd-none', id: 'photo-input'}, label_html: { class: 'upload-fill'}, label: '📁 upload' %>
-      </div>
-      <% end %>
-    </div>
-
+  <div class="document">
+    <p>Download contract</p>
+    <a href="<%= current_user.contract_pdf %>" download, target="-blank">
+      <i class="fas fa-file-pdf"></i>
+    </a>
   </div>
 
+  <div class="transition">
+    <p>. . . . . . . . . . . . . . . . .</p>
+  </div>
 
-  <div class="sign-document">
+  <div class="sign">
+    <p>Upload signed file</p>
+    <%= simple_form_for current_user, method: :patch do |f| %>
+    <div class="upload">
 
-    <div class="document">
-      <p>Download internal rules</p>
-      <a href="<%= current_user.contract_pdf %>" download, target="-blank">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-    </div>
-
-    <div class="transition">
-      <p>. . . . . . . . . . . . . . . . .</p>
-    </div>
-
-    <div class="sign">
-      <p>Upload signed file</p>
-      <%= simple_form_for current_user, method: :patch do |f| %>
-      <div class="upload">
-        <%= f.input :contract_pdf, input_html: { class: 'd-none', id: 'photo-input'}, label_html: { class: 'upload-fill'}, label: '📁 upload' %>
-      </div>
+      <%= f.input :upload_contrat, input_html: { class: 'd-none', id: 'photo-input'}, label_html: { class: 'upload-fill'}, label: '📁 upload' %>
+      <%= f.submit "upload", class: "btn-blue" %>
       <% end %>
     </div>
-
   </div>
+
+</div>
+
+
+</div>
