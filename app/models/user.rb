@@ -31,25 +31,27 @@ class User < ApplicationRecord
   mount_uploader :upload_internal_rules, FilespdfUploader
 
   def progress
-    @score = 0
-    self.avatar != "" ? @score += 1 : @score
-    self.hobby_1 != "" ? @score += 1 : @score
-    self.hobby_2 != "" ? @score += 1 : @score
-    self.hobby_3 != "" ? @score += 1 : @score
-    self.location != "" ? @score += 1 : @score
-    self.description != "" ? @score += 1 : @score
-    self.linkedin_url != "" ? @score += 1 : @score
-    self.personal_mail != "" ? @score += 1 : @score
-    self.visit_pages2 != "" ? @score += 1 : @score
-    self.visit_pages1 != "" ? @score += 1 : @score
-    return @score
+    score = 0
+    self.avatar != "" || nil  ? score += 1 : score
+    self.hobby_1 != "" || nil  ? score += 1 : score
+    self.hobby_2 != "" || nil  ? score += 1 : score
+    self.hobby_3 != "" || nil  ? score += 1 : score
+    self.description != "" || nil  ? score += 1 : score
+    self.linkedin_url != "" || nil ? score += 1 : score
+    self.visit_pages4 = true ? score += 1 : score # buddy
+    self.visit_pages3 = true ? score += 1 : score # welcome
+    # self.visit_pages2 != false ? score += 1 : score # feature
+    self.visit_pages1 != false ? score += 1 : score # home
+    self.upload_contrat != "" || nil ? score += 1 : score # home
+    score_to_return = (score.to_f/10*100).to_i
+    return score_to_return
   end
 
   def buddy_object
     @buddy = User.find((self.buddy).to_i)
     return @buddy
   end
-  
+
   def self.all_full_name
     user_first_names = []
     User.all.each do |user|
