@@ -20,7 +20,7 @@
                             <%= f.input :phone_number, label: false, placeholder: 'Phone number' %>
                         </div>
                         <div class="col">
-                            <%= f.input :location, label: false, placeholder: 'Location' %>
+                            <%= f.input :location, label: false, placeholder: 'Location', input_html: { id: 'autocomplete' } %>
                         </div>
                     </div>
                     <%= f.input :personal_mail, label: false, placeholder: 'Personal email' %>
@@ -34,27 +34,27 @@
                     <%= f.input :corporate_mail, label: false, placeholder: 'Corporate email' %>
                     <h6>Team</h6>
                     <div class="teams">
-                        <div class="team-name">
+                        <div class="team-name ">
                             <input class="hidden" type="hidden" value="1" name="user[team][]" id="user_team_1">
                             <label class="hidden" for="user_team_1">Product</label>
                         </div>
-                        <div class="team-name">
+                        <div class="team-name ">
                             <input class="hidden" type="hidden" value="2" name="user[team][]" id="user_team_2">
                             <label class="hidden" for="user_team_2">HR</label>
                         </div>
-                        <div class="team-name">
+                        <div class="team-name ">
                             <input class="hidden" type="hidden" value="3" name="user[team][]" id="user_team_3">
                             <label class="hidden" for="user_team_3">Engineering</label>
                         </div>
-                        <div class="team-name">
+                        <div class="team-name ">
                             <input class="hidden" type="hidden" value="4" name="user[team][]" id="user_team_4">
                             <label class="hidden" for="user_team_4">Sales</label>
                         </div>
-                        <div class="team-name">
+                        <div class="team-name ">
                             <input class="hidden" type="hidden" value="5" name="user[team][]" id="user_team_5">
                             <label class="hidden" for="user_team_5">Design</label>
                         </div>
-                          <div class="team-name">
+                          <div class="team-name ">
                             <input class="hidden" type="hidden" value="6" name="user[team][]" id="user_team_6">
                             <label class="hidden" for="user_team_6">Marketing</label>
                         </div>
