@@ -156,6 +156,11 @@ p, a, span{
   cursor: pointer;
 }
 
+.team-name-hierarchy:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
 .active {
   background-color: #b1deff;
   color: white;
