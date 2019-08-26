@@ -49,4 +49,19 @@ class User < ApplicationRecord
     @buddy = User.find((self.buddy).to_i)
     return @buddy
   end
+  
+  def self.all_full_name
+    user_first_names = []
+    User.all.each do |user|
+      concatenate = user.first_name + " " + user.last_name
+      to_add = [concatenate, user.id]
+      user_first_names << to_add
+    end
+    return user_first_names
+  end
+
+  def full_name
+    full_name = self.first_name + " " + self.last_name
+    return full_name
+  end
 end
