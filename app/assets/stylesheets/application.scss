@@ -137,7 +137,18 @@ p, a, span{
   margin-top: 10px;
   text-align: center;
   font-weight: 600;
-  opacity: 0.8
+  opacity: 0.6
+}
+
+.team-name-hierarchy {
+  flex: 0 0 30%;
+  background-color: #b1deff;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  opacity: 0.6
 }
 
 .team-name:hover {
@@ -146,7 +157,7 @@ p, a, span{
 }
 
 .active {
-  background-color: $green;
+  background-color: #b1deff;
   color: white;
   opacity: 1;
 
