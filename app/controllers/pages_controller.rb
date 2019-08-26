@@ -20,7 +20,7 @@ class PagesController < ApplicationController
  end
 
  def buddy
-   current_user.visit_pages4 = true
+   current_user.visit_pages5 = true
    current_user.save
  end
 end
