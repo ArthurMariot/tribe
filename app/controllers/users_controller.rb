@@ -36,17 +36,7 @@ class UsersController < ApplicationController
   def update
     @user = current_user
     if @current_user.update(user_params)
-      SLACK_NOTIFIER.post text:
-      "<!here> Hi all 🖐
-
-    Super excited to let you know that it's the first day of *#{@user.first_name}* who is joining us as a *#{@user.job_title}*.
-    #{@user.first_name} lives at #{@user.location} 🌍
-
-    💙 Here are these hobbies:
-    - #{@user.hobby_1}
-    - #{@user.hobby_2}
-    - #{@user.hobby_3}"
-
+      SLACK_NOTIFIER.post(message)
       if params['user']['upload_contrat'] || params['user']['upload_internal_rules']
         redirect_to user_documents_path(@user)
       else
@@ -56,6 +46,7 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
 
   # def progress
   #   @user = current_user
@@ -77,8 +68,29 @@ class UsersController < ApplicationController
   #   return score
   # end
 
+  private
+
+
 
   def user_params
     params.require(:user).permit(:upload_contrat, :upload_internal_rules, :location, :linkedin_url, :hobby_1, :hobby_2, :hobby_3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :team, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar, :upload_contrat, :upload_internal_rules, :description)
+  end
+
+  def message
+    { text:
+    "<!here> Hi all 🖐
+    Super excited to let you know that it's the first day of *#{@user.first_name}* who is joining us as a *#{@user.job_title}*.
+    #{@user.first_name} lives at #{@user.location} 🌍
+
+    Here are these hobbies:
+    - #{@user.hobby_1}
+    - #{@user.hobby_2}
+    - #{@user.hobby_3}
+
+    Some facts about #{@user.first_name}:
+    '#{@user.description}'
+
+    Welcome 🎉",
+      gif: "phone" }
   end
 end
