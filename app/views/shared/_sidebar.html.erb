@@ -29,12 +29,16 @@
           <li><i class="fas fa-globe-europe"></i></i>Meet your colleagues</li>
         </p>
       </a>
+      <a href=" <%= user_buddy_path(current_user.id) %> ">
+        <p>
+          <li><i class="far fa-handshake"></i></i>Your buddy</li>
+        </p>
+      </a>
       <a href=" <%= user_documents_path(current_user.id) %> ">
         <p>
           <li><i class="far fa-file"></i>Documents</li>
         </p>
       </a>
-
       <li>  <div class="progessionbar"> <%= render 'shared/progressionbar' %> </div></li>
     </ul>
   </div>

@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     else
       @users_by_team = User.all.geocoded
     end
+
     @markers = @users_by_team.map do |user|
       {
         lat: user.latitude,
