@@ -38,10 +38,10 @@ class User < ApplicationRecord
     self.hobby_3 != "" || nil  ? score += 1 : score
     self.description != "" || nil  ? score += 1 : score
     self.linkedin_url != "" || nil ? score += 1 : score
-    self.visit_pages4 = true ? score += 1 : score # buddy
+    self.visit_pages5 = true ? score += 1 : score # buddy
     self.visit_pages3 = true ? score += 1 : score # welcome
     # self.visit_pages2 != false ? score += 1 : score # feature
-    self.visit_pages1 != false ? score += 1 : score # home
+    self.visit_pages2 != false ? score += 1 : score # home
     self.upload_contrat != "" || nil ? score += 1 : score # home
     score_to_return = (score.to_f/10*100).to_i
     return score_to_return
