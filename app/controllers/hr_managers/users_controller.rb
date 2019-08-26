@@ -8,7 +8,6 @@ class HrManagers::UsersController < ApplicationController
   end
 
   def create
-    raise
     new_employee = User.new
     new_employee = User.new(user_params)
     new_employee.company = current_user.company
@@ -17,7 +16,6 @@ class HrManagers::UsersController < ApplicationController
     new_employee.onboarding_status = true
     new_employee.team = Team.find(params[:user][:team][1])
     new_employee.hierarchy_rank = HierarchyRank.find(params[:user][:hierarchy_rank][1])
-    raise
     if new_employee.save!
       UserMailer.with(user: self).welcome.deliver_now
       redirect_to hr_managers_users_path
