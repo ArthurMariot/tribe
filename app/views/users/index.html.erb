@@ -11,6 +11,11 @@
 
 
 <div class="map-plus-infos">
+
+  <div id="map" style="width: 95%;
+    height: 550px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
   <div class="general-infos">
     <div class="info-number">
       <h2><%= User.all.count %></h2>
@@ -28,8 +33,4 @@
     </div>
   </div>
 
-
-  <div id="map" style="width: 80%;
-    height: 550px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
 </div>
