@@ -11,33 +11,33 @@
     <th class="titles"><i class="fas fa-user"></i>   BUDDY</th>
     <th class="titles"><i class="fas fa-tasks"></i>   ONBOARDING PROGRESS</th>
   </tr>
-
-  <% @employees.each do |employee| %>
-  <tr>
-   <th>
-    <div class="employee">
-      <% if employee.avatar.url.nil? %>
-      <img id="avatar-small-index" src="https://fpcambler.org/wp-content/themes/church-emphasis/assets/dist/img/default-avatar.jpg">
-      <% else %>
-      <img id="avatar-small-index" src="<%= cl_image_path employee.avatar %>">
-      <% end %>
-      <%= employee.first_name %> <%= employee.last_name %></th>
-    </div>
-    <th><%= employee.team.name %></th>
-    <th><%= employee.job_title %></th>
-    <th><%= employee.location%></th>
-    <th><%= employee.arrival_at%></th>
-    <th> <div class="employee">
-      <img id="avatar-small-index" src="<%= cl_image_path employee.buddy_object.avatar %>">
-      <%= employee.buddy_object.first_name %> <%= employee.buddy_object.last_name %></th>
-    </div></th>
-    <th><div class="progessionbar">
-      <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: <%= employee.progress %>%" aria-valuenow="<%= employee.progress %>" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-    </div></th>
-  </tr>
-  <% end %>
-</table>
-
+   <% @employees.each do |employee| %>
+     <tr>
+       <th>
+          <div class="employee">
+            <% if employee.avatar.url.nil? %>
+              <img id="avatar-small-index" src="https://fpcambler.org/wp-content/themes/church-emphasis/assets/dist/img/default-avatar.jpg">
+           <% else %>
+              <img id="avatar-small-index" src="<%= cl_image_path employee.avatar %>">
+           <% end %>
+              <%= employee.first_name %> <%= employee.last_name %></th>
+          </div>
+       <th><%= employee.team.name %></th>
+       <th><%= employee.job_title %></th>
+       <th><%= employee.location.split(", ")[0];%></th>
+       <th><%= employee.arrival_at %></th>
+       <th> <div class="employee">
+                <img id="avatar-small-index" src="<%= cl_image_path employee.buddy_object.avatar %>">
+               <%= employee.buddy_object.first_name %> <%= employee.buddy_object.last_name %></th>
+          </div></th>
+       <th>
+         <div class="progessionbar">     
+           <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" style="width: <%= employee.progress %>%" aria-valuenow="<%= employee.progress %>" aria-valuemin="0" aria-valuemax="100">
+             </div>
+      </div></div>
+      </th>
+     </tr>
+   <% end %>
+ </table>
 </div>
