@@ -7,20 +7,22 @@ import "../plugins/init_autocomplete"
 import "../plugins/option_picker"
 import Swal from 'sweetalert2';
 
-const new_employee = document.querySelector("#new-employee");
+const new_employee = document.querySelector(".new-employee");
 if (new_employee) {
- apply.addEventListener("click", (event) => {
+ new_employee.addEventListener("click", (event) => {
    Swal.fire({
      type: 'success',
-     title: '<span style="color:#FFFFFF; text-shadow: 1.5px 1.5px #ff487e"> CONGRATS!<span>',
+     title: '<span style="color:#1fe3cf"> NEW EMPLOYEE ADDED!<span>',
      width: 600,
-     html: '<span style="color:#FFFFFF">Your application has been sent!<span>',
-     background: '#1800FF',
-     showConfirmButton: false,
-     timer: 2200
-   });
+     html: '<span style="color: white">The onboarding email has been sent<span>',
+     background: '#4f81c7',
+     confirmButtonText:'Go to my dashboard'
+     }).then(function() {
+        window.location.href = "/hr_managers/users";
+        console.log('The Ok Button was clicked.');
+        });
  });
 }
 
-initMapbox();
 
+initMapbox();

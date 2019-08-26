@@ -19,7 +19,7 @@ class HrManagers::UsersController < ApplicationController
 
     if new_employee.save!
       UserMailer.with(user: self).welcome.deliver_now
-      redirect_to hr_managers_users_path
+      # redirect_to hr_managers_users_path
     else
       render :new
     end
