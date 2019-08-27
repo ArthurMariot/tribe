@@ -25,7 +25,6 @@ class HrManagers::UsersController < ApplicationController
       u = User.last
       u.time_zone = u.timezone
       u.save
-      raise
       redirect_to hr_managers_users_path
     else
       render :new

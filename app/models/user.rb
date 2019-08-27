@@ -74,13 +74,18 @@ class User < ApplicationRecord
 
   def timezone
     # key = ENV['TIMEZONEDBKEY']`
-
+    key = 'QSETAOLPXC13'
     lat = self.latitude
     long = self.longitude
     url = "http://api.timezonedb.com/v2.1/get-time-zone?key=#{key}&format=json&by=position&lat=#{lat}&lng=#{long}"
     response = open(url).read
     to_display = JSON.parse(response)
     return to_display["gmtOffset"]/3600
+  end
+
+  def updatetimezone
+    self.time_zone = self.timezone
+    self.save
   end
 
   def matchingtimezone(compared)
@@ -90,8 +95,12 @@ class User < ApplicationRecord
     daystart = 9
     dayend = 19
     arr_user1 = (daystart..dayend).to_a
-    arr_user2 = ((daystart - diff)..(dayend - diff)).to_a
+    arr_user2 = ((daystart + diff)..(dayend + diff)).to_a
     to_return = arr_user1 & arr_user2
-    return to_return
+    if to_return.empty?
+      to_return = [0 ,0]
+    else
+      to_return
+    end
   end
 end

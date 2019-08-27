@@ -126,3 +126,128 @@ jade = User.create!(email: "jade@trello.com", password: "password", first_name: 
 
 puts 'Finished users!'
 
+taylor.updatetimezone
+sleep 2
+puts 'timezone'
+charlie.updatetimezone
+sleep 2
+puts 'timezone'
+camille.updatetimezone
+sleep 2
+puts 'timezone'
+caroline.updatetimezone
+sleep 2
+puts 'timezone'
+jean.updatetimezone
+sleep 2
+puts 'timezone'
+christian.updatetimezone
+sleep 2
+puts 'timezone'
+phillipe.updatetimezone
+sleep 2
+puts 'timezone'
+briac.updatetimezone
+sleep 2
+puts 'timezone'
+mickael.updatetimezone
+sleep 2
+puts 'timezone'
+catherine.updatetimezone
+sleep 2
+puts 'timezone'
+jack.updatetimezone
+sleep 2
+puts 'timezone'
+julien.updatetimezone
+sleep 2
+puts 'timezone'
+eric.updatetimezone
+sleep 2
+puts 'timezone'
+john.updatetimezone
+sleep 2
+puts 'timezone'
+jacques.updatetimezone
+sleep 2
+puts 'timezone'
+george.updatetimezone
+sleep 2
+puts 'timezone'
+joyce.updatetimezone
+sleep 2
+puts 'timezone'
+steven.updatetimezone
+sleep 2
+puts 'timezone'
+amanda.updatetimezone
+sleep 2
+puts 'timezone'
+emma.updatetimezone
+sleep 2
+puts 'timezone'
+louis.updatetimezone
+sleep 2
+puts 'timezone'
+marc.updatetimezone
+sleep 2
+puts 'timezone'
+charles.updatetimezone
+sleep 2
+puts 'timezone'
+brieux.updatetimezone
+sleep 2
+puts 'timezone'
+karin.updatetimezone
+sleep 2
+puts 'timezone'
+claire.updatetimezone
+sleep 2
+puts 'timezone'
+edouard.updatetimezone
+sleep 2
+puts 'timezone'
+benjamin.updatetimezone
+sleep 2
+puts 'timezone'
+marie.updatetimezone
+sleep 2
+puts 'timezone'
+jeanne.updatetimezone
+sleep 2
+puts 'timezone'
+jade.updatetimezone
+puts 'timezone'
+
+# taylor.save
+# charlie.save
+# camille.save
+# caroline.save
+# jean.save
+# christian.save
+# phillipe.save
+# briac.save
+# mickael.save
+# catherine.save
+# jack.save
+# julien.save
+# eric.save
+# john.save
+# jacques.save
+# george.save
+# joyce.save
+# steven.save
+# amanda.save
+# emma.save
+# louis.save
+# marc.save
+# charles.save
+# brieux.save
+# karin.save
+# claire.save
+# edouard.save
+# benjamin.save
+# marie.save
+# jeanne.save
+# jade.save
+
