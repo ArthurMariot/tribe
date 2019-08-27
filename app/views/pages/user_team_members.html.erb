@@ -1,8 +1,38 @@
 <h2>Discover your team</h2>
-<div class="all_avatar">
-  <% @team_members.each do |employee|%>
-    <img src="<%= employee.avatar %>", class="avatar-extra-large" alt="">
-  <% end %>
+
+<div class="all-employees-team">
+
+    <% @team_members.each do |employee|%>
+
+    <div class="employee-team-card">
+        <div class="avatar-buddy">
+            <img class="avatar-extra-large" src="<%= cl_image_path employee.avatar %>">
+        </div>
+        <div class="employee-team-infos">
+            <h4>
+                <%= employee.first_name %>
+                <%= employee.last_name %>
+            </h4>
+            <p>
+                <%= employee.job_title %>
+            </p>
+            <p> <i class="fas fa-map-marker-alt"></i>
+                <%= employee.location %>
+            </p>
+        </div>
+
+        <div class="buttons">
+            <div>
+                <a href="<%= user_path(employee.id) %>" , class="btn-blue"><i class="far fa-user"></i> Profile</a>
+            </div>
+            <div>
+                <a href="mailto:<%= employee.email %>" , class="btn-blue"><i class="far fa-comment-alt"></i> Chat </a>
+            </div>
+        </div>
+
+    </div>
+    <% end %>
+
 </div>
 
 <div class="button-next">
