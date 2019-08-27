@@ -3,10 +3,12 @@
 
 <div class="sign-document">
 
-  <div class="document">
+  <div >
     <p>Download contract</p>
     <a href="<%= current_user.contract_pdf %>" download, target="-blank">
-      <i class="fas fa-file-pdf"></i>
+    <%#= cl_image_tag(current_user.contract_pdf, :width => 200, :height => 250, :crop => :fill) %>
+      <img src="<%= cl_image_path(current_user.contract_pdf)[0..-4] + "png" %>" alt="" width="350" height="450" crop ="fill">
+
     </a>
   </div>
 
@@ -29,3 +31,6 @@
 
 
 </div>
+
+
+<%= cl_image_tag("single_page_pdf.png", :width => 200, :height => 250, :crop => :fill) %>

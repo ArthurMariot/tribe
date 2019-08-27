@@ -1,0 +1,25 @@
+trix-toolbar .trix-button-group {
+    display: -webkit-box;
+    display: flex;
+    margin-bottom: 8px;
+    // border: 1px solid #bbb;
+    // border-top-color: #ccc;
+    // border-bottom-color: #888;
+    border-radius: 3px;
+    border: solid 1px $blue;
+    }
+
+trix-toolbar .trix-button:not(:first-child) {
+    border-left: 1px solid $blue;
+}
+
+.trix-button-group {
+  button.redo {
+    display: none;
+  }
+  button.undo {
+    display: none;
+  }
+}
+
+
