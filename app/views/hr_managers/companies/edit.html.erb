@@ -3,9 +3,9 @@
   <p>Fill in the company information below accurately, so we can create the presentation of the company</p>
   <div class="form-style">
     <%= simple_form_for [:hr_managers, @company] do |f| %>
-      <%= f.input :short_description, label: 'Description', :as => :text, :input_html => { 'rows' => 11} %>
+      <%= f.input :short_description, as: :trix_editor %>
       <%= f.input :mission, label: 'Mission' %>
-      <%= f.input :history, label: 'History', :as => :text, :input_html => { 'rows' => 10} %>
+      <%= f.input :history, as: :trix_editor %>
       <%= f.input :photo_header, label: 'Main picture' %>
       <%= f.input :photo_description, label: 'Team picture' %>
       <%= f.input :founded_in, label: 'Date of creation' %>
@@ -30,4 +30,5 @@
     <% end %>
   </div>
 </div>
+
 

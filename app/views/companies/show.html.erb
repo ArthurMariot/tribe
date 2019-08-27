@@ -3,9 +3,13 @@
         </div>
         <div class="description">
             <div class="description-infos">
-               <h2 id="mission"><%= @company.mission %></h2>
+               <h2 id="mission"><%=  @company.mission %></h2>
                 <p>
-                    <%= @company.short_description %>
+                    <%= raw @company.short_description %>
+                </p>
+                <h2><%= @company.name %>'s history</h2>
+                <p>
+                    <%= raw @company.history %>
                 </p>
 
           <h2><%= @company.name %>'s Team</h2>
