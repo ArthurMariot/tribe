@@ -1,18 +1,22 @@
 .btn-green {
-  padding: 20px 24px;
+  padding: 20px 25px;
   border-radius: 5px;
   border: none;
   font-size: 12px;
   line-height: 12px;
-  font-weight: 700;
+  font-weight: bolder;
   letter-spacing: 1px;
-  background-color: #1fe3cf;
+  background-color: $green;
   color: $blue;
   margin-top: 50px;
+  p {
+    padding-right: 0px;
+  }
 }
 
 .btn-green:hover {
-  color:white;
+  opacity: 0.8;
+  color: $blue;
 }
 
 
@@ -23,10 +27,10 @@
   border: none;
   font-size: 12px;
   line-height: 12px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1px;
-  background-color: #b1deff;
-  font-color: white;
+  background-color: $blue;
+  color: $green;
   text-align : center;
 }
 
@@ -39,10 +43,10 @@
   border: none;
   font-size: 12px;
   line-height: 12px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1px;
-  background-color: $red;
-  color: white;
+  background-color: $blue;
+  color: $green;
   text-align : center;
 }
 
@@ -52,17 +56,16 @@
   border: none;
   font-size: 12px;
   line-height: 12px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1px;
   background-color: #1fe3cf;
-  color: #263858;
+  color: $blue;
   margin-top: 50px;
     p {
       margin-top: -5px;
       color: #263858;
       font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1px;
+      font-weight: 600;
     }
 }
 

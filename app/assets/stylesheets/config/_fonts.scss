@@ -1,16 +1,5 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
-// Define fonts for body and headers
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');// Define fonts for body and headers
 $body-font: 'Roboto', sans-serif;
-$headers-font: 'Poppins', sans-serif
-
-// To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+$headers-font: 'Source Sans Pro', sans-serif;

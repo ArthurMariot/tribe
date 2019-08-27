@@ -23,5 +23,9 @@ class PagesController < ApplicationController
    current_user.visit_pages5 = true
    current_user.save
  end
+
+def user_team_members
+  @team_members = User.where(team_id: current_user.team.id)
 end
 
+end

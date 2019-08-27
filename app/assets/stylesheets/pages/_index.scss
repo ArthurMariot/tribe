@@ -1,6 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "buddy";
+@import "user_team_members";
 
 #form-employee {
   width: 60%;
@@ -13,6 +14,7 @@
 
     label {
       color: $blue;
+      margin: 0;
     }
 
     .form-control {
@@ -41,6 +43,8 @@
     padding: 25px 30px;
     }
 }
+
+
 
 
 #form-employee-edit {
