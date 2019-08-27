@@ -32,17 +32,16 @@ class User < ApplicationRecord
 
   def progress
     score = 0
-    self.avatar != "" || nil  ? score += 1 : score
-    self.hobby_1 != "" || nil  ? score += 1 : score
-    self.hobby_2 != "" || nil  ? score += 1 : score
-    self.hobby_3 != "" || nil  ? score += 1 : score
-    self.description != "" || nil  ? score += 1 : score
-    self.linkedin_url != "" || nil ? score += 1 : score
-    self.visit_pages5 = true ? score += 1 : score # buddy
-    self.visit_pages3 = true ? score += 1 : score # welcome
-    # self.visit_pages2 != false ? score += 1 : score # feature
-    self.visit_pages2 != false ? score += 1 : score # home
-    self.upload_contrat != "" || nil ? score += 1 : score # home
+    self.avatar.url == ("" || nil) ? score += 1 : score
+    self.hobby_1 == ("" || nil) ? score : score += 1
+    self.hobby_2 == ("" || nil) ? score : score += 1
+    self.hobby_3 == ("" || nil) ? score : score += 1
+    self.description == ("" || nil) ? score += 1 : score
+    self.linkedin_url == ("" || nil) ? score : score += 1
+    self.visit_pages5 == true ? score += 1 : score # buddy
+    self.visit_pages3 == true ? score += 1 : score # welcome
+    self.visit_pages2 == true ? score += 1 : score # home
+    self.upload_contrat == ("" || nil) ? score += 1 : score
     score_to_return = (score.to_f/10*100).to_i
     return score_to_return
   end
