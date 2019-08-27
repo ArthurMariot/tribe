@@ -16,9 +16,17 @@ class HrManagers::UsersController < ApplicationController
     new_employee.onboarding_status = true
     new_employee.team = Team.find(params[:user][:team][1])
     new_employee.hierarchy_rank = HierarchyRank.find(params[:user][:hierarchy_rank][1])
+    # new_employee.geocoded
+    # new_employee.time_zone = new_employee.timezone
+    # raise
     if new_employee.save!
       UserMailer.with(user: self).welcome.deliver_now
-      # redirect_to hr_managers_users_path
+      User.all.geocoded
+      u = User.last
+      u.time_zone = u.timezone
+      u.save
+      raise
+      redirect_to hr_managers_users_path
     else
       render :new
     end
