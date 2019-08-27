@@ -28,6 +28,6 @@ class HrManagers::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:buddy, :team, :location, :linkedin_url, :hobby1, :hobby2, :hobby3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar, :description)
+    params.require(:user).permit(:buddy, :team, :location, :linkedin_url, :hobby1, :hobby2, :hobby3, :first_name, :last_name, :personal_mail, :corporate_mail, :phone_number, :job_title, :department, :hierarcky_rank, :contract_pdf, :rules_reglementation_pdf, :slack_account, :avatar, :description, :arrival_at)
   end
 end
