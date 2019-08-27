@@ -1,3 +1,6 @@
+require 'json'
+require 'open-uri'
+
 class User < ApplicationRecord
   include PgSearch
   # Include default devise modules. Others available are:
@@ -50,7 +53,6 @@ class User < ApplicationRecord
   end
 
   def buddy_object
-
     @buddy = User.find((self.buddy).to_i)
     return @buddy
   end
@@ -68,5 +70,28 @@ class User < ApplicationRecord
   def full_name
     full_name = self.first_name + " " + self.last_name
     return full_name
+  end
+
+  def timezone
+    # key = ENV['TIMEZONEDBKEY']`
+
+    lat = self.latitude
+    long = self.longitude
+    url = "http://api.timezonedb.com/v2.1/get-time-zone?key=#{key}&format=json&by=position&lat=#{lat}&lng=#{long}"
+    response = open(url).read
+    to_display = JSON.parse(response)
+    return to_display["gmtOffset"]/3600
+  end
+
+  def matchingtimezone(compared)
+    user1 = self.time_zone.to_i
+    user2 = compared.time_zone.to_i
+    diff = user1 - user2
+    daystart = 9
+    dayend = 19
+    arr_user1 = (daystart..dayend).to_a
+    arr_user2 = ((daystart - diff)..(dayend - diff)).to_a
+    to_return = arr_user1 & arr_user2
+    return to_return
   end
 end
