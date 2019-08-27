@@ -1,0 +1,12 @@
+<h2>Discover your team</h2>
+<div class="all_avatar">
+  <% @team_members.each do |employee|%>
+    <img src="<%= employee.avatar %>", class="avatar-extra-large" alt="">
+  <% end %>
+</div>
+
+<div class="button-next">
+    <a href="<%= user_buddy_path(current_user.id) %>">
+        <i class="fas fa-arrow-right"></i>
+    </a>
+</div>

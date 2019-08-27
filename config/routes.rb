@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     get 'welcome', to: 'pages#welcome', as: 'welcome'
     get 'documents', to: 'pages#documents', as: 'documents'
     get 'buddy', to: 'pages#buddy', as: 'buddy'
+    get 'team', to: 'pages#user_team_members', as: 'team'
   end
   resources :companies, only: [:show]
   get 'progress', to: 'users#progress', as: 'progress'
