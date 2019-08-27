@@ -1,5 +1,5 @@
 module ApplicationHelper
-  # def to_date(mytime)
-  #   mytime.strfd("%d/%m/%Y")
-  # end
+  def to_date(mytime)
+    Date.parse(mytime).strftime("%B, %e")
+  end
 end
