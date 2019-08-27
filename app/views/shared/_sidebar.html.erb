@@ -9,12 +9,14 @@
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
       <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
     </div>
-    <p> <%= current_user.first_name %> <%= current_user.last_name %></p>
   </div>
 
 
   <div class="onboarding-step">
     <ul>
+        <p>
+          <li class="title"><i class="fas fa-arrow-alt-circle-down"></i>Onboarding steps</li>
+        </p>
       <a href=" <%= company_path(current_user.company) %> ">
         <p>
           <li><i class="far fa-building"></i></i>Discover the company</li>
