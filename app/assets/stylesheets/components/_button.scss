@@ -14,6 +14,22 @@
   }
 }
 
+.btn-green-lg {
+  padding: 20px 25px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  line-height: 12px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  background-color: $green;
+  color: $blue;
+  margin-top: 50px;
+  p {
+    padding-right: 0px;
+  }
+}
+
 .btn-green:hover {
   opacity: 0.8;
   color: $blue;
