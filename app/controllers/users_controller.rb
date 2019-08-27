@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.geocoded
-    current_user.visit_pages1 = true
+    current_user.visit_pages3 = true
     current_user.save
 
     @team = Team.where("name ILIKE ?", "%#{params[:query]}%")

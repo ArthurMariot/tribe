@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 2019_08_25_101343) do
     t.bigint "hierarchy_rank_id"
     t.string "contract_status", default: ""
     t.string "contract_pdf", default: ""
-    t.string "avatar", default: ""
+    t.string "avatar"
     t.string "hobby_1", default: ""
     t.string "hobby_2", default: ""
     t.string "hobby_3", default: ""
@@ -114,9 +114,9 @@ ActiveRecord::Schema.define(version: 2019_08_25_101343) do
     t.boolean "visit_pages5", default: false
     t.boolean "visit_pages6", default: false
     t.boolean "visit_pages7", default: false
-    t.string "upload_contrat"
-    t.string "upload_internal_rules"
-    t.string "description"
+    t.string "upload_contrat", default: ""
+    t.string "upload_internal_rules", default: ""
+    t.string "description", default: ""
     t.string "slack_id"
     t.integer "buddy"
     t.index ["company_id"], name: "index_users_on_company_id"

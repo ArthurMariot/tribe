@@ -7,7 +7,7 @@ class AddColumnsToUsers < ActiveRecord::Migration[5.2]
     add_column :users, :visit_pages5, :boolean, default: false
     add_column :users, :visit_pages6, :boolean, default: false
     add_column :users, :visit_pages7, :boolean, default: false
-    add_column :users, :upload_contrat, :string
-    add_column :users, :upload_internal_rules, :string
+    add_column :users, :upload_contrat, :string, default: ""
+    add_column :users, :upload_internal_rules, :string, default: ""
   end
 end

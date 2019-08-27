@@ -16,7 +16,7 @@ class AddFieldToUsers < ActiveRecord::Migration[5.2]
     add_reference :users, :hierarchy_rank, foreign_key: true
     add_column :users, :contract_status, :string, default: ""
     add_column :users, :contract_pdf, :string, default: ""
-    add_column :users, :avatar, :string, default: ""
+    add_column :users, :avatar, :string
     add_column :users, :hobby_1, :string, default: ""
     add_column :users, :hobby_2, :string, default: ""
     add_column :users, :hobby_3, :string, default: ""

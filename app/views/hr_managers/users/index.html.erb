@@ -25,7 +25,7 @@
        <th><%= employee.team.name %></th>
        <th><%= employee.job_title %></th>
        <th><%= employee.location.split(", ")[0];%></th>
-       <th><%= employee.arrival_at %></th>
+       <th> <%= employee.arrival_at %> </th>
        <th> <div class="employee">
                 <img id="avatar-small-index" src="<%= cl_image_path employee.buddy_object.avatar %>">
                <%= employee.buddy_object.first_name %> <%= employee.buddy_object.last_name %></th>
