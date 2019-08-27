@@ -2,4 +2,5 @@
 <h4><%= user.first_name %> <%= user.last_name %> </h4>
 <p class="no-margin"> <i class="fas fa-map-marker-alt"></i> <%= user.location %> </p>
 <p class="no-margin"> <i class="fas fa-user-friends"></i> <%= user.team.name %> </p>
-<a href="<%= user_path(user.id) %>"><h5>See profile</h5></a>
+<a href="<%= user_path(user.id) %>" , class="btn-blue-profile"><i class="far fa-user"></i> See profile</a>
+
