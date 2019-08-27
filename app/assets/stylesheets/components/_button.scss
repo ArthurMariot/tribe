@@ -88,3 +88,32 @@
  input {
     color:white;
   }
+
+  .btn-blue-profile {
+    padding: 10px 18px;
+    border-radius: 18px;
+    border: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    line-height: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: $blue;
+    color: white;
+    font-size: 10px;
+  }
+
+  .btn-blue-profile:hover {
+    color: white;
+
+  }
+
+  .btn-back {
+    font-size: 16px;
+    text-align: left;
+    font-weight: bolder;
+    color: $green;
+  }
+
+

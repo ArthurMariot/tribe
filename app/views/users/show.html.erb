@@ -22,21 +22,23 @@
               </tr>
             </table>
           </center>
-          <h5>What I love to do? <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sunglasses_Emoji_be26cc0a-eef9-49e5-8da2-169bb417cc0b_large.png?v=1480481057" alt="emoji-smile" width="18"></h5>
+          <center>
+          <div class="hobbies">
+          <h5> What I 💜 to do?</h5>
 
-          <ul id="ul-left">
+          <ul>
             <li><p>- <%= @user.hobby_1 %></p></li>
             <li><p>- <%= @user.hobby_2 %></p></li>
             <li><p>- <%= @user.hobby_3 %></p></li>
           </ul>
-
-
+          </div>
+          </center>
         </div>
       </div>
 
     </div>
     <center>
-<a class="btn-green" href="<%= users_path %>"> Back to the map </a>
+<a class="btn-back" href="<%= users_path %>"> <i class="fas fa-long-arrow-alt-left"></i> Back </a>
       </center>
 <br><br><br><br><br><br><br>
 
