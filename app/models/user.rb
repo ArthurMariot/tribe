@@ -32,21 +32,25 @@ class User < ApplicationRecord
 
   def progress
     score = 0
-    self.avatar.url == ("" || nil) ? score += 1 : score
+    self.avatar.url.nil? ? score : score += 1
     self.hobby_1 == ("" || nil) ? score : score += 1
     self.hobby_2 == ("" || nil) ? score : score += 1
     self.hobby_3 == ("" || nil) ? score : score += 1
-    self.description == ("" || nil) ? score += 1 : score
+    self.description == (nil || "") ? score : score += 1
     self.linkedin_url == ("" || nil) ? score : score += 1
-    self.visit_pages5 == true ? score += 1 : score # buddy
-    self.visit_pages3 == true ? score += 1 : score # welcome
-    self.visit_pages2 == true ? score += 1 : score # home
-    self.upload_contrat == ("" || nil) ? score += 1 : score
-    score_to_return = (score.to_f/10*100).to_i
+    self.visit_pages6 ? score += 1 : score # buddy
+    # self.visit_pages5 ? score += 1 : score # buddy
+    self.visit_pages4 ? score += 1 : score # team member
+    self.visit_pages3 ? score += 1 : score # index users
+    # self.visit_pages2 ? score += 1 : score # welcome
+    self.visit_pages1 ? score += 1 : score # company
+    self.upload_contrat.url.nil? ? score : score += 1
+    score_to_return = (score.to_f/11*100).to_i
     return score_to_return
   end
 
   def buddy_object
+
     @buddy = User.find((self.buddy).to_i)
     return @buddy
   end
