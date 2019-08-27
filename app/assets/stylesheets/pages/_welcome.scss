@@ -1,13 +1,22 @@
-.welcome-infos {
-  width: 600px;
-  text-align: center;
-  padding: 24px 24px;
-  margin: 0 auto;
-  width: 80%;
+.welcome {
+  height: 100%;
+  margin-top: 25px;
 }
 
-.welcome-infos .image-lg {
-  height: 200px;
+.welcome-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  .image-lg {
+  height: 350px;
   object-fit: contain;
-  margin-bottom: 16px;
+  margin-top: 30px;
+  margin-bottom: 70px;
 }
+}
+
+
+.welcome .btn-green-lg {
+  margin-left: 36%;
+}
+
