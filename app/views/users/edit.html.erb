@@ -19,7 +19,7 @@
                     </div>
                 </div>
 
-      <%= f.input :description, as: :text, label: 'Tell us more about you' %>
+      <%= f.input :description, as: :trix_editor, label: 'Tell us more about you' %>
       <%= f.input :linkedin_url, label: 'Linkedin Url' %>
            <tr>
       <%= f.input :avatar, input_html: { class: 'd-none', id: 'photo-input'}, label_html: { class: 'upload-fill'}, label: '📁 Upload a fill' %> </tr>
@@ -27,4 +27,6 @@
     <% end %>
     </table>
   </div>
+
+
 

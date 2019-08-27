@@ -22,6 +22,7 @@ gem 'pg_search'
 gem "slack-notifier"
 gem "omniauth"
 gem 'omniauth-slack'
+gem 'trix-rails', require: 'trix'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
