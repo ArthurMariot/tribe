@@ -48,7 +48,6 @@ class UsersController < ApplicationController
     end
   end
 
-
   # def progress
   #   @user = current_user
   #   score = 0

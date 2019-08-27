@@ -30,6 +30,11 @@
           <li><i class="fas fa-globe-europe"></i></i>Meet your colleagues</li>
         </p>
       </a>
+        <a href=" <%= user_team_path(current_user.id) %> ">
+        <p>
+          <li><i class="fas fa-users"></i>Your team</li>
+        </p>
+      </a>
       <a href=" <%= user_buddy_path(current_user.id) %> ">
         <p>
           <li><i class="far fa-handshake"></i></i>Your buddy</li>
