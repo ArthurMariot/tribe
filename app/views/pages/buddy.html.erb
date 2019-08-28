@@ -1,33 +1,58 @@
 <h1>Meet your buddy!</h1>
 <p>
-    <%= current_user.buddy_object.first_name %> will take care of you during the first onboarding week.</p>
-<div class="buddy-card">
+  <%= current_user.buddy_object.first_name %> will take care of you during the first onboarding week.</p>
+  <div class="buddy-card">
     <div class="avatar-buddy">
-        <img class="avatar-extra-extra-large" src="<%= cl_image_path current_user.buddy_object.avatar %>">
+      <img class="avatar-extra-extra-large" src="<%= cl_image_path current_user.buddy_object.avatar %>">
     </div>
     <div class="buddy-infos">
-        <h4>
-            <%= current_user.buddy_object.first_name %>
-            <%= current_user.buddy_object.last_name %>
-        </h4>
-        <p>
-            <%= current_user.buddy_object.job_title %>
-        </p>
-        <p> <i class="fas fa-map-marker-alt"></i>
-            <%= current_user.buddy_object.location.split(", ")[0]; %>
-        </p>
+      <h4>
+        <%= current_user.buddy_object.first_name %>
+        <%= current_user.buddy_object.last_name %>
+      </h4>
+      <p>
+        <%= current_user.buddy_object.job_title %>
+      </p>
+      <p> <i class="fas fa-map-marker-alt"></i>
+        <%= current_user.buddy_object.location.split(", ")[0]; %>
+      </p>
     </div>
-    <div class="buttons">
-        <div>
-            <a href="<%= user_path(current_user.buddy_object.id) %>" , class="btn-blue"><i class="far fa-user"></i> Profile</a>
-        </div>
-        <div>
-            <a href="mailto:<%= current_user.buddy_object.email %>" , class="btn-blue"><i class="far fa-comment-alt"></i> Chat </a>
-        </div>
-    </div>
-</div>
-<div class="button-next">
-    <a href="<%= user_documents_path(current_user.id) %>">
-        <i class="fas fa-arrow-right"></i>
-    </a>
-</div>
+    <div class="employee-team-infos">
+      <p>Working hours in common:</p>
+      <div class="progress">
+        <% if current_user.matchingtimezone(current_user.buddy_object).first == current_user.matchingtimezone(current_user.buddy_object).last %>
+        <div class="progress-warning" role="progressbar" style="width:100%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">No match found</div>
+        <% else %>
+        <div class="progress-warning" role="progressbar" style="width:<%=  ((100 / 14).to_f * (current_user.matchingtimezone(current_user.buddy_object).first - 7)) %>%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+        <% if current_user.matchingtimezone(current_user.buddy_object).first < 13 %>
+        <p style="font-size: 12px; margin-right: 5px">
+          <%= current_user.matchingtimezone(current_user.buddy_object).first %>am</p>
+          <% else %>
+          <p style="font-size: 12px; margin-right: 5px">
+            <%= current_user.matchingtimezone(current_user.buddy_object).first - 12 %>pm</p>
+            <% end %>
+            <div class="progress-bar bg-warning" role="progressbar" style="width: <%= ((100 / 14).to_f * (current_user.matchingtimezone(current_user.buddy_object).last)-7) - ((100 / 14).to_f * (current_user.matchingtimezone(current_user.buddy_object).first)-7) %>%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            <% if current_user.matchingtimezone(current_user.buddy_object).last < 13 %>
+            <p style="font-size: 12px; margin-left: 5px">
+              <%= current_user.matchingtimezone(current_user.buddy_object).last %>am</p>
+              <% else %>
+              <p style="font-size: 12px; margin-left: 5px">
+                <%= current_user.matchingtimezone(current_user.buddy_object).last - 12  %>pm </p>
+                <% end %>
+                <% end %>
+              </div>
+            </div>
+            <div class="buttons">
+              <div>
+                <a href="<%= user_path(current_user.buddy_object.id) %>" , class="btn-blue"><i class="far fa-user"></i> Profile</a>
+              </div>
+              <div>
+                <a href="mailto:<%= current_user.buddy_object.email %>" , class="btn-blue"><i class="far fa-comment-alt"></i> Chat </a>
+              </div>
+            </div>
+          </div>
+          <div class="button-next">
+            <a href="<%= user_documents_path(current_user.id) %>">
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
