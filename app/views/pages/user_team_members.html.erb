@@ -1,62 +1,65 @@
 <h2>Discover your team</h2>
 <div class="all-employees-team">
-    <% @team_members.each do |employee|%>
-    <div class="employee-team-card">
-        <div class="employee-team-head">
-            <div class="avatar-buddy">
-                <% if employee.avatar.url.nil? %>
-                <img class="avatar-extra-large" src="https://fpcambler.org/wp-content/themes/church-emphasis/assets/dist/img/default-avatar.jpg">
-                <% else %>
-                <img class="avatar-extra-large" src="<%= cl_image_path employee.avatar %>">
-                <% end %>
-            </div>
-            <div class="employee-info">
-                <h4>
-                    <%= employee.first_name %>
-                    <%= employee.last_name %>
-                </h4>
-                <p>
-                    <%= employee.job_title %>
-                </p>
-                <p> <i class="fas fa-map-marker-alt"></i>
-                    <%= employee.location.split(", ")[0];%>
-            </div>
+  <% @team_members.each do |employee|%>
+  <div class="employee-team-card">
+    <div class="employee-team-head">
+      <div class="avatar-buddy">
+        <% if employee.avatar.url.nil? %>
+        <img class="avatar-extra-large" src="https://fpcambler.org/wp-content/themes/church-emphasis/assets/dist/img/default-avatar.jpg">
+        <% else %>
+        <img class="avatar-extra-large" src="<%= cl_image_path employee.avatar %>">
+        <% end %>
+      </div>
+      <div class="employee-info">
+        <h4>
+          <%= employee.first_name %>
+          <%= employee.last_name %>
+        </h4>
+        <p>
+          <%= employee.job_title %>
+        </p>
+        <p> <i class="fas fa-map-marker-alt"></i>
+          <%= employee.location.split(", ")[0];%>
         </div>
-        <div class="employee-team-infos">
-            <p>Working hours in common:</p>
-            <div class="progress">
-                <div class="progress-warning" role="progressbar" style="width:<%=  ((100 / 14).to_f * (current_user.matchingtimezone(employee).first - 7)) %>%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                <% if current_user.matchingtimezone(employee).first < 13 %>
-                <p style="font-size: 12px; margin-right: 5px">
-                    <%= current_user.matchingtimezone(employee).first %>am</p>
+      </div>
+      <div class="employee-team-infos">
+        <p>Working hours in common:</p>
+        <div class="progress">
+          <% if current_user.matchingtimezone(employee).first == current_user.matchingtimezone(employee).last %>
+          <div class="progress-warning" role="progressbar" style="width:100%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">No match found</div>
+          <% else %>
+          <div class="progress-warning" role="progressbar" style="width:<%=  ((100 / 14).to_f * (current_user.matchingtimezone(employee).first - 7)) %>%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+          <% if current_user.matchingtimezone(employee).first < 13 %>
+          <p style="font-size: 12px; margin-right: 5px">
+            <%= current_user.matchingtimezone(employee).first %>am</p>
+            <% else %>
+            <p style="font-size: 12px; margin-right: 5px">
+              <%= current_user.matchingtimezone(employee).first - 12 %>pm</p>
+              <% end %>
+              <div class="progress-bar bg-warning" role="progressbar" style="width: <%= ((100 / 14).to_f * (current_user.matchingtimezone(employee).last)-7) - ((100 / 14).to_f * (current_user.matchingtimezone(employee).first)-7) %>%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+              <% if current_user.matchingtimezone(employee).last < 13 %>
+              <p style="font-size: 12px; margin-left: 5px">
+                <%= current_user.matchingtimezone(employee).last %>am</p>
                 <% else %>
-                <p style="font-size: 12px; margin-right: 5px">
-                    <%= current_user.matchingtimezone(employee).first - 12 %>pm</p>
-                <% end %>
-                <div class="progress-bar bg-warning" role="progressbar" style="width: <%= ((100 / 14).to_f * (current_user.matchingtimezone(employee).last)-7) - ((100 / 14).to_f * (current_user.matchingtimezone(employee).first)-7) %>%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                <% if current_user.matchingtimezone(employee).last < 13 %>
                 <p style="font-size: 12px; margin-left: 5px">
-                    <%= current_user.matchingtimezone(employee).last %>am</p>
-                <% else %>
-                <p style="font-size: 12px; margin-left: 5px">
-                    <%= current_user.matchingtimezone(employee).last - 12  %>pm </p>
-                <% end %>
+                  <%= current_user.matchingtimezone(employee).last - 12  %>pm </p>
+                  <% end %>
+                  <% end %>
+                </div>
             </div>
-            </p>
-        </div>
-        <div class="buttons">
-            <div>
+            <div class="buttons">
+              <div>
                 <a href="<%= user_path(employee.id) %>" , class="btn-blue"><i class="far fa-user"></i> Profile</a>
-            </div>
-            <div>
+              </div>
+              <div>
                 <a href="mailto:<%= employee.email %>" , class="btn-blue"><i class="far fa-comment-alt"></i> Chat </a>
+              </div>
             </div>
+          </div>
+          <% end %>
         </div>
-    </div>
-    <% end %>
-</div>
-<div class="button-next">
-    <a href="<%= user_buddy_path(current_user.id) %>">
-        <i class="fas fa-arrow-right"></i>
-    </a>
-</div>
+        <div class="button-next">
+          <a href="<%= user_buddy_path(current_user.id) %>">
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
