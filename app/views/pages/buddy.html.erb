@@ -14,7 +14,7 @@
             <%= current_user.buddy_object.job_title %>
         </p>
         <p> <i class="fas fa-map-marker-alt"></i>
-            <%= current_user.buddy_object.location %>
+            <%= current_user.buddy_object.location.split(", ")[0]; %>
         </p>
     </div>
     <div class="buttons">

@@ -1,9 +1,3 @@
-// .all_avatar {
-//   display: flex;
-//   justify-content: space-between;
-//   margin-top: 50px;
-// }
-
 .all-employees-team {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -13,7 +7,7 @@
 .employee-team-card {
   background-color: white;
   border-radius: 12px;
-  padding: 20px 30px;
+  padding: 30px 18px;
     .avatar-buddy {
       display: flex;
       justify-content: center;
@@ -26,25 +20,10 @@
     }
 }
 
-.employee-team-infos {
-  text-align: center;
-
-    p {
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-
-    h4 {
-      font-size: 20px;
-      font-weight: bold;
-      color: $green;
-    }
-  }
-
 .buttons {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
   .btn-blue {
     padding: 10px 18px;
     border-radius: 18px;
@@ -53,3 +32,43 @@
     color: white;
   }
 }
+
+.employee-team-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-between;
+  margin-bottom: 15px;
+  .employee-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    p {
+      margin: 0 0 8px 0;
+      padding: 0;
+      text-align: left;
+    }
+  }
+  .employee-info h4 {
+    color: $green;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  .employee-info p {
+    font-size: 14px;
+  }
+  .avatar-buddy {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+}
+
+.employee-team-infos {
+  p {
+    margin-bottom: 2px;
+    text-align: left;
+    font-size: 14px;
+  }
+}
+
