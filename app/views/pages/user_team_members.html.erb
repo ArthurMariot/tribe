@@ -6,7 +6,11 @@
 
   <div class="employee-team-card">
     <div class="avatar-buddy">
-      <img class="avatar-extra-large" src="<%= cl_image_path employee.avatar %>">
+      <% if employee.avatar.url.nil? %>
+        <img class="avatar-extra-large" src="https://fpcambler.org/wp-content/themes/church-emphasis/assets/dist/img/default-avatar.jpg">
+      <% else %>
+        <img class="avatar-extra-large" src="<%= cl_image_path employee.avatar %>">
+      <% end %>
     </div>
     <div class="employee-team-infos">
       <h4>
