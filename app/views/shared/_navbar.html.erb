@@ -10,7 +10,7 @@
       <div class="nav-center">
         <% if current_user.nil? %>
           <a href="<%= user_session_path %>">LOG IN</a>
-          <a href="#">SIGN UP</a>
+          <a href="<%= new_user_registration_path %>">SIGN UP</a>
         <% else %>
         <a href=" <%= hr_managers_features_path %> ">HOME</a>
          <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= cl_image_path current_user.avatar %>" >

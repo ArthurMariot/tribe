@@ -13,7 +13,7 @@
 .employee-team-card {
   background-color: white;
   border-radius: 12px;
-  padding: 40px;
+  padding: 35px 30px;
     .avatar-buddy {
       display: flex;
       justify-content: center;
@@ -30,11 +30,11 @@
   text-align: center;
 
     p {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     h4 {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: bold;
       color: $green;
     }
