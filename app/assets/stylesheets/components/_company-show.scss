@@ -17,6 +17,12 @@
 .banner-company {
   height: 400px;
   margin-bottom: 0px;
+  border-radius: 5px;
+  background-size: cover;
+}
+
+.banner-company img {
+  object-fit: cover;
 }
 
 .content-page {

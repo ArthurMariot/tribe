@@ -67,6 +67,7 @@ padding: 16px 10px;
 .onboarding-step .title {
   color: $green;
   font-size: 18px;
+  pointer-events: none;
 }
 
 .sidebar .onboarding-progress {
