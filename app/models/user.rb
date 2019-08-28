@@ -41,14 +41,14 @@ class User < ApplicationRecord
     self.hobby_3 == ("" || nil) ? score : score += 1
     self.description == (nil || "") ? score : score += 1
     self.linkedin_url == ("" || nil) ? score : score += 1
-    self.visit_pages6 ? score += 1 : score # buddy
+    self.visit_pages6 ? score += 6 : score # buddy
     # self.visit_pages5 ? score += 1 : score # buddy
-    self.visit_pages4 ? score += 1 : score # team member
-    self.visit_pages3 ? score += 1 : score # index users
+    self.visit_pages4 ? score += 6 : score # team member
+    self.visit_pages3 ? score += 6 : score # index users
     # self.visit_pages2 ? score += 1 : score # welcome
-    self.visit_pages1 ? score += 1 : score # company
-    self.upload_contrat.url.nil? ? score : score += 1
-    score_to_return = (score.to_f/11*100).to_i
+    self.visit_pages1 ? score += 6 : score # company
+    self.upload_contrat.url.nil? ? score : score += 6
+    score_to_return = (score.to_f/36*100).to_i
     return score_to_return
   end
 
