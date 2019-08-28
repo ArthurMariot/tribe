@@ -46,8 +46,12 @@
   font-weight: 600;
   letter-spacing: 1px;
   background-color: $blue;
-  color: $green;
+  color: white;
   text-align : center;
+}
+
+.btn-blue:hover {
+  border: none;
 }
 
 .btn-contact {

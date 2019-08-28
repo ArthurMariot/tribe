@@ -4,6 +4,9 @@
   justify-content: space-around;
   width: 80%;
   margin: 24px auto;
+    p {
+      color: $green;
+    }
 }
 
 .sign-document .document {
@@ -19,19 +22,29 @@
   }
 }
 
+#p-center {
+  position: absolute;
+  top: 312px;
+  right: 300px;
+}
+
 .sign-document .sign {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: white;
   border-radius: 8px;
   padding: 8px 16px;
   min-width: 200px;
+  align-content: center;
   .upload-fill {
     margin-top: 0;
     background-color: $green;
     border-radius: 8px;
     color: white;
+    position: absolute;
+    top: 352px;
+    right: 294px;
+    border: none;
   }
 }
 
