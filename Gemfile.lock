@@ -275,8 +275,8 @@ DEPENDENCIES
   slack-notifier
   spring
   spring-watcher-listen (~> 2.0.0)
-  trix-rails
   strftime
+  trix-rails
   uglifier
   web-console (>= 3.3.0)
   webpacker
