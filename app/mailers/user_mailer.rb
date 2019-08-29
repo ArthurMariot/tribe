@@ -1,6 +1,6 @@
 class UserMailer < ApplicationMailer
   def welcome
     @user = User.last
-    mail(to: @user.email, subject: 'Welcome to Zapier 🚀')
+    mail(to: @user.personal_mail, subject: 'Welcome to Zapier 🚀')
   end
 end
