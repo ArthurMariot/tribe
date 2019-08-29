@@ -7,6 +7,7 @@ import { initSelect2 } from "../plugins/init_select2";
 import "../plugins/init_autocomplete"
 import "../plugins/option_picker"
 import Swal from 'sweetalert2';
+import '../plugins/sibebar';
 
 const new_employee = document.querySelector(".new-employee");
 if (new_employee) {
@@ -28,3 +29,10 @@ if (new_employee) {
 initMapbox();
 initSelect2();
 
+const sidebarItems = document.querySelectorAll(".sidebar-item");
+const title = document.querySelector('.sidebar-id');
+sidebarItems.forEach((item) => {
+  if (item.id === title.id) {
+    item.classList.toggle("active-item");
+  }
+});
