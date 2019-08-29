@@ -1,45 +1,47 @@
 <div class="container">
- <h2>Hey <%= current_user.first_name %>, Welcome to Tribe 😎</h2>
+  <div class='title-div'>
+    <h2>Hey <%= current_user.first_name %>, Welcome to Tribe 😎</h2>
+  </div>
   <div class="features">
-<a href="<%= edit_hr_managers_company_path(current_user.company)%>">
-    <div class="feature-card">
-        <div class="card-mission-img">
-          <%= image_tag "company.svg", class: "logo-sm" %>
-            <!-- <img src="https://miro.medium.com/max/1400/1*XX2X4OtFiQTdYV3OtIlAIg.png" alt="" class="logo-sm"> -->
-        </div>
-        <div class="feature-card-title">
-          <h4> Company details </h4>
-        </div>
-        <div class="feature-card-info">
-          <p>Will be used to complete your company presentation</p>
-        </div>
-    </div>
-</a>
-<a href=" <%= new_hr_managers_user_path %>">
-    <div class="feature-card">
-        <div class="card-mission-img">
-          <%= image_tag "add-employee.svg", class: "logo-sm" %>
-        </div>
-        <div class="feature-card-title">
-          <h4>Add a new starter</h4>
-        </div>
-        <div class="feature-card-info">
-          <p>Complete all the information required to start an onboarding</p>
-        </div>
-    </div>
-</a>
-<a href="<%= hr_managers_users_path %>">
-    <div class="feature-card">
-        <div class="card-mission-img">
-          <%= image_tag "manage-employee.svg", class: "logo-sm" %>
-        </div>
-        <div class="feature-card-title">
-          <h4> Manage new starters</h4>
-        </div>
-        <div class="feature-card-info">
-          <p>Access and follow all ongoing onboardings</p>
-        </div>
-    </div>
-</a>
-</div>
+    <a href="<%= edit_hr_managers_company_path(current_user.company)%>">
+      <div class="feature-card">
+          <div class="card-mission-img">
+            <%= image_tag "company.svg", class: "logo-sm" %>
+              <!-- <img src="https://miro.medium.com/max/1400/1*XX2X4OtFiQTdYV3OtIlAIg.png" alt="" class="logo-sm"> -->
+          </div>
+          <div class="feature-card-title">
+            <h4> Company details </h4>
+          </div>
+          <div class="feature-card-info">
+            <p>Will be used to complete your company presentation</p>
+          </div>
+      </div>
+    </a>
+    <a href=" <%= new_hr_managers_user_path %>">
+      <div class="feature-card">
+          <div class="card-mission-img">
+            <%= image_tag "add-employee.svg", class: "logo-sm" %>
+          </div>
+          <div class="feature-card-title">
+            <h4>Add a new starter</h4>
+          </div>
+          <div class="feature-card-info">
+            <p>Complete all the information required to start an onboarding</p>
+          </div>
+      </div>
+    </a>
+    <a href="<%= hr_managers_users_path %>">
+      <div class="feature-card">
+          <div class="card-mission-img">
+            <%= image_tag "manage-employee.svg", class: "logo-sm" %>
+          </div>
+          <div class="feature-card-title">
+            <h4> Manage new starters</h4>
+          </div>
+          <div class="feature-card-info">
+            <p>Access and follow all ongoing onboardings</p>
+          </div>
+      </div>
+    </a>
+  </div>
 </div>
