@@ -20,32 +20,32 @@
   <meta property="og:site_name" content="<%= meta_title %>" />
   <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
-<body>
+  <body>
 
-  <div class="content">
-    <% if  current_user.nil? || (current_user.onboarding_status == false)  %>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <% else %>
-    <%= render 'shared/sidebar' %>
-    <% end %>
+    <div class="content">
+      <% if  current_user.nil? || (current_user.onboarding_status == false)  %>
+        <%= render 'shared/navbar' %>
+        <%= render 'shared/flashes' %>
+      <% else %>
+        <%= render 'shared/sidebar' %>
+      <% end %>
 
     <% unless current_page?(root_path) %>
-    <div class="main-wrapper">
-    <% if  current_user.nil? || (current_user.onboarding_status == false)  %>
-    navbar-exist
-    <% else %>
-    sidebar-exist
-    <% end %>">
-    <% end %>
-    <%= yield %>
-  </div>
+      <div class="main-wrapper
+        <% if  current_user.nil? || (current_user.onboarding_status == false)  %>
+        navbar-exist
+      <% else %>
+        sidebar-exist
+      <% end %>">
+     <% end %>
+        <%= yield %>
+      </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
-  <script type="text/javascript" src="./js/sig_pad.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+    <script type="text/javascript" src="./js/sig_pad.js"></script>
 
-  <%= javascript_include_tag 'application' %>
-  <%= javascript_pack_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
 
-</body>
+  </body>
 </html>
