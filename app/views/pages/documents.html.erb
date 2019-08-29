@@ -14,24 +14,27 @@
   </div>
 
   <div class="transition">
-    <p>. . . . . . . . . . . . . . . . .</p>
   </div>
 
   <div class="sign">
-    <p>Upload signed file</p>
+    <p id="p-center">Upload signed file</p>
     <%= simple_form_for current_user, method: :patch do |f| %>
     <div class="upload">
 
       <%= f.input :upload_contrat, input_html: { class: 'd-none', id: 'photo-input'}, label_html: { class: 'upload-fill'}, label: '📁 Choose file' %>
-      <%= f.submit "upload", class: "btn-blue" %>
-      <% end %>
+
+
     </div>
   </div>
 
-</div>
-
 
 </div>
 
+      <%= f.submit "Upload", class: "btn-blue center" %>
+      <% end %>
+
+</div>
+
+<%= cl_image_tag("single_page_pdf.png", :width => 200, :height => 250, :crop => :fill) %>
 
 
