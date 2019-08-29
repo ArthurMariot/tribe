@@ -12,6 +12,7 @@
   justify-content: space-around;
   background-color: $blue;
   padding-top: 20px;
+  padding-bottom: 0px;
   height: 100vh;
   margin-top: 30px;
 }
@@ -33,10 +34,54 @@
   }
 }
 
-.banner-img {
-
-}
 
 .banner-img img {
   width: 475px;
+}
+
+
+.features-home {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  background-color: $blue;
+  // height: 100vh;
+}
+
+.features-home-2 {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  background-color: $blue;
+  // height: 100vh;
+}
+
+.feature-content {
+  width: 600px;
+}
+
+.feature-content h4 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: $yellow;
+}
+
+.feature-content p {
+  color: $light-gray;
+  text-align: justify;
+}
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .btn-green {
+    width: 168px;
+  }
+  span {
+    color: $green;
+    font-size: 22px;
+  }
 }
