@@ -34,6 +34,8 @@ h1 {
   color: $blue;
 }
 
+
+
 h2 {
   font-size:28px;
   line-height:52px;
@@ -41,6 +43,7 @@ h2 {
   text-align:center;
   color: $blue;
 }
+
 
 
 h3 {
@@ -141,8 +144,18 @@ p, a, span{
   margin-top: 10px;
   text-align: center;
   font-weight: 600;
-  opacity: 0.6
+  opacity: 0.6;
+  input {
+    width: 0;
+  }
 }
+
+
+// .team-name label {
+//     display: inline-block;
+//     text-align: center;
+//     align: middle;
+// }
 
 .team-name-hierarchy {
   flex: 0 0 30%;
@@ -169,5 +182,4 @@ p, a, span{
   background-color: #b1deff;
   color: white;
   opacity: 1;
-
 }

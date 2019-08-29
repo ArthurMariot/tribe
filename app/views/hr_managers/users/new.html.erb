@@ -32,7 +32,78 @@
                 <div class="col">
                     <h5>Corporate information</h5>
                     <%= f.input :corporate_mail, label: false, placeholder: 'Corporate email' %>
+
                     <h6>Team</h6>
+
+
+                   <!--  <%= f.association :team, label: false, collection: Team.all, as: :check_boxes %> -->
+
+
+
+<div class="teams">
+<!-- <fieldset class="form-group"> -->
+
+
+      <input type="hidden" name="user[team_id][]" value="">
+
+     <!--  <div> -->
+      <div class="team-name">
+        <input style="visibility:hidden" type="checkbox" value="1" name="user[team_id][]" id="user_team_id_1">
+        <label class="collection_check_boxes" for="user_team_id_1">Sales</label>
+      </div>
+
+      <!-- <div> -->
+      <div class="team-name">
+        <input style="visibility:hidden" type="checkbox" value="2" name="user[team_id][]" id="user_team_id_2">
+        <label class="collection_check_boxes" for="user_team_id_2">Product</label>
+      </div>
+
+      <!-- <div> -->
+      <div class="team-name">
+        <input style="visibility:hidden" type="checkbox" value="3" name="user[team_id][]" id="user_team_id_3">
+        <label class="collection_check_boxes" or="user_team_id_3">HR</label>
+      </div>
+
+      <!-- <div> -->
+      <div class="team-name">
+        <input style="visibility:hidden" type="checkbox" value="4" name="user[team_id][]" id="user_team_id_4">
+        <label class="collection_check_boxes" for="user_team_id_4">Engineering</label>
+      </div>
+
+      <!-- <div> -->
+      <div class="team-name">
+        <input style="visibility:hidden" type="checkbox" value="5" name="user[team_id][]" id="user_team_id_5">
+        <label class="collection_check_boxes" for="user_team_id_5">Design</label>
+      </div>
+
+     <!--  <div> -->
+      <div class="team-name ">
+        <input style="visibility:hidden" type="checkbox" value="6" name="user[team_id][]" id="user_team_id_6">
+        <label class="collection_check_boxes" for="user_team_id_6">Marketing</label>
+      </div>
+
+<!-- </fieldset> -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
                     <div class="teams">
                         <div class="team-name ">
                             <input class="hidden" type="hidden" value="1" name="user[team][]" id="user_team_1">
@@ -58,7 +129,16 @@
                             <input class="hidden" type="hidden" value="6" name="user[team][]" id="user_team_6">
                             <label class="hidden" for="user_team_6">Marketing</label>
                         </div>
-                    </div>
+                    </div> -->
+
+
+
+
+
+
+
+
+
                     <%= f.input :job_title, label: false, placeholder: 'Job title' %>
 
                     <%= f.input :arrival_at, as: :string, required: false, label: false, placeholder: 'Date of arrival', input_html: {class: "datepicker"} %>
