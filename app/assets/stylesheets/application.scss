@@ -34,6 +34,15 @@ h1 {
   color: $blue;
 }
 
+
+mark:before {
+    background-color: $green;
+    content: " ";
+    position: absolute;
+    z-index: -2;
+    bottom: 0;
+}
+
 h2 {
   font-size:28px;
   line-height:52px;
@@ -113,11 +122,11 @@ p, a, span{
     font-size: 15px;
   }
 
-.avatar-extra-large-show {
+  .avatar-extra-large-show {
     width: 110px;
     border-radius: 50%;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
+  }
 
 }
 
