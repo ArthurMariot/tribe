@@ -143,7 +143,7 @@
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 35px;
   background-color: #FFFFFF;
   border-radius: 8px;
   padding: 30px 70px;
@@ -152,7 +152,7 @@
       color: $blue;
       margin: 0px;
       font-weight: 400;
-      margin-top: 25px;
+      margin-top: 15px;
       margin-bottom: 10px;
     }
 
@@ -160,19 +160,12 @@
       border-radius: 6px;
     }
 
-    h5 {
-      color: $green;
-      text-align: center;
-      margin-bottom: 20px;
-      margin-top: 20px;
-    }
-
     h6 {
       color: $blue;
       padding: 0px;
       margin: 0px;
       font-weight: 600;
-      margin-top: 25px;
+      margin-top: 20px;
     }
 
     .btn-green {
