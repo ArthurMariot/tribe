@@ -53,10 +53,10 @@ value_4 = Value.create!(title: "Simplicity", content: "Our product is simple to 
 puts 'Finished values!'
 
 puts 'Creating teams...'
-hr = Team.create!(name: "Product", company: trello)
-product = Team.create!(name: "HR", company: trello)
-engineering = Team.create!(name: "Engineering", company: trello)
 sales = Team.create!(name: "Sales", company: trello)
+product = Team.create!(name: "Product", company: trello)
+hr = Team.create!(name: "HR", company: trello)
+engineering = Team.create!(name: "Engineering", company: trello)
 design = Team.create!(name: "Design", company: trello)
 marketing = Team.create!(name: "Marketing", company: trello)
 puts 'Finished teams!'

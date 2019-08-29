@@ -11,7 +11,6 @@
     </div>
   </div>
 
-
   <div class="onboarding-step">
     <ul>
         <p>
@@ -19,32 +18,32 @@
         </p>
       <a href=" <%= company_path(current_user.company) %> ">
         <p>
-          <li><i class="far fa-building"></i></i>Discover the company</li>
+          <li id="company-show" class="sidebar-item"><i class="far fa-building"></i>Discover the company</li>
         </p>
       </a>
       <a href=" <%= edit_user_path(current_user.id) %> ">
         <p>
-          <li><i class="fas fa-user"></i></i>Personal informations</li>
+          <li id="user-edit" class="sidebar-item"><i class="fas fa-user"></i>Profile information</li>
         </p>
       </a>
       <a href="<%= users_path %>">
         <p>
-          <li><i class="fas fa-globe-europe"></i></i>Meet your colleagues</li>
+          <li id="users-index" class="sidebar-item"><i class="fas fa-globe-europe"></i>Meet your colleagues</li>
         </p>
       </a>
         <a href=" <%= user_team_path(current_user.id) %> ">
         <p>
-          <li><i class="fas fa-users"></i>Your team</li>
+          <li id="user-team-members" class="sidebar-item"><i class="fas fa-users"></i>Your team</li>
         </p>
       </a>
       <a href=" <%= user_buddy_path(current_user.id) %> ">
         <p>
-          <li><i class="far fa-handshake"></i></i>Your buddy</li>
+          <li id="buddy-show" class="sidebar-item"><i class="far fa-handshake"></i>Your buddy</li>
         </p>
       </a>
       <a href=" <%= user_documents_path(current_user.id) %> ">
         <p>
-          <li><i class="far fa-file"></i>Documents</li>
+          <li id="document-show" class="sidebar-item"><i class="far fa-file"></i>Documents</li>
         </p>
       </a>
     </ul>

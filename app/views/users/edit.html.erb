@@ -1,10 +1,9 @@
-  <h1>Personnal Details</h1>
-  <p>Fill in the employee information below, so we can create the onboarding process</p>
+  <div id="user-edit" class="sidebar-id"></div>
+  <h1>Profile information</h1>
+  <p>Complete the information below to create your profile</p>
   <div id="form-employee-edit">
     <%= simple_form_for @user do |f| %>
     <table>
-
-<h5>Tell to your colleagues what you enjoy after work</h5>
     <div class="row">
             <div class="col">
                 <div class="row">
@@ -22,7 +21,7 @@
 
       <%= f.input :linkedin_url, label: 'Linkedin Url' %>
            <tr>
-      <%= f.input :avatar, input_html: { class: 'd-none', id: 'photo-input'}, label_html: { class: 'upload-fill'}, label: '📁 Upload avatar' %> </tr>
+      <%= f.input :avatar, input_html: { class: 'd-none', id: 'photo-input'}, label_html: { class: 'upload-fill'}, label: '📁 Upload your avatar' %> </tr>
       <%= f.button :submit, value: "Submit", class:"btn-green" %>
     <% end %>
     </table>
