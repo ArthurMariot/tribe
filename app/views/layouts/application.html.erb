@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Tribe</title>
-    <link rel="icon" type="images/png" href="https://i.ibb.co/XXsMmX1/logo-icon.png">
-    <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
-    <%= stylesheet_pack_tag 'application', media: 'all' %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Tribe - Onboard your starters</title>
+  <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <%= csrf_meta_tags %>
+  <%= action_cable_meta_tag %>
+  <%= stylesheet_pack_tag 'application', media: 'all' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title><%= meta_title %></title>
+  <meta name="description" content="<%= meta_description %>">
 
-    <div class="content">
-      <% if  current_user.nil? || (current_user.onboarding_status == false)  %>
-        <%= render 'shared/navbar' %>
-        <%= render 'shared/flashes' %>
-      <% else %>
-        <%= render 'shared/sidebar' %>
-      <% end %>
+  <!-- Facebook Open Graph data -->
+  <meta property="og:title" content="<%= meta_title %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<%= request.original_url %>" />
+  <meta property="og:image" content="<%= meta_image %>" />
+  <meta property="og:description" content="<%= meta_description %>" />
+  <meta property="og:site_name" content="<%= meta_title %>" />
+</head>
+<body>
+
+  <div class="content">
+    <% if  current_user.nil? || (current_user.onboarding_status == false)  %>
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
+    <% else %>
+    <%= render 'shared/sidebar' %>
+    <% end %>
 
     <% unless current_page?(root_path) %>
-      <div class="main-wrapper
-        <% if  current_user.nil? || (current_user.onboarding_status == false)  %>
-        navbar-exist
-      <% else %>
-        sidebar-exist
-      <% end %>">
-     <% end %>
-        <%= yield %>
-      </div>
+    <div class="main-wrapper
+    <% if  current_user.nil? || (current_user.onboarding_status == false)  %>
+    navbar-exist
+    <% else %>
+    sidebar-exist
+    <% end %>">
+    <% end %>
+    <%= yield %>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
-    <script type="text/javascript" src="./js/sig_pad.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+  <script type="text/javascript" src="./js/sig_pad.js"></script>
 
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_pack_tag 'application' %>
 
-  </body>
+</body>
 </html>
