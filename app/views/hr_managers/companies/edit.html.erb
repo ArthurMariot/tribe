@@ -8,7 +8,7 @@
       <%= f.input :history, as: :trix_editor %>
       <%= f.input :photo_header, label: 'Main picture' %>
       <%= f.input :photo_description, label: 'Team picture' %>
-      <%= f.input :founded_in, label: 'Date of creation' %>
+      <%= f.input :founded_in, as: :string, required: false, label: 'Date of creation', placeholder: 'founded in...', input_html: {class: "datepicker"} %>
       <div class="row">
         <div class="col">
       <%= f.input :linkedin_url, label: 'Linkedin' %>
@@ -30,5 +30,7 @@
     <% end %>
   </div>
 </div>
+
+
 
 
