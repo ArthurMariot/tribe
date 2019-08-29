@@ -1,0 +1,56 @@
+#footer-blue {
+color: white;
+background-color: $blue;
+}
+
+.footer {
+  // background-color: white;
+  // color: white;
+  background-color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  padding: 0px 50px;
+  // position: absolute;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+   i {
+    color: white;
+   }
+
+}
+
+.footer-copyright {
+  color: white;
+    i {
+      color: red;
+    }
+}
+
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.footer-links-blue a {
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+  color: white;
+  opacity: 1;
+}
+
+.footer-links a:hover {
+  color: $yellow;
+}
+
+.footer .fa-beer {
+  color: $yellow;
+}
+
+
