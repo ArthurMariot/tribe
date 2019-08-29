@@ -64,8 +64,6 @@ padding: 16px 10px;
   padding: 0;
 }
 
-
-
 .sidebar .onboarding-step {
   margin-bottom: 50px;
 }
@@ -91,6 +89,14 @@ padding: 16px 10px;
   }
 }
 
+.sidebar .dropdown-menu a {
+  color: $blue;
+}
+
+.sidebar .nav-center .dropdown-menu {
+  margin-right: 10px;
+  border: 1px solid $blue;
+}
 
 
 
