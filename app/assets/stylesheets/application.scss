@@ -136,18 +136,19 @@ p, a, span{
   margin: 40px auto;
 }
 
+
 .card-white {
   background-color: white;
-  padding: 30px;
+  padding: 25px;
   box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
   border-radius: 4px;
-  margin: 20px 0px;
+  margin: 15px 0px;
   text-align: center;
   h5 {
     color: $blue;
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 8px;
     margin-bottom: 20px;
   }
 
@@ -157,12 +158,18 @@ p, a, span{
 
   p {
     font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  p span {
+    font-size: 25px
   }
 
 .avatar-extra-large-show {
     width: 110px;
     border-radius: 50%;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0px;
 }
 
 }
@@ -192,6 +199,8 @@ p, a, span{
     width: 0;
   }
 }
+
+
 
 
 // .team-name label {
