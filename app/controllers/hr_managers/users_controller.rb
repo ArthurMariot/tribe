@@ -16,6 +16,7 @@ class HrManagers::UsersController < ApplicationController
     new_employee.onboarding_status = true
     new_employee.team = Team.find(params[:user][:team_id][1])
     new_employee.hierarchy_rank = HierarchyRank.find(params[:user][:hierarchy_rank][1])
+
     # new_employee.geocoded
     # new_employee.time_zone = new_employee.timezone
     # raise
